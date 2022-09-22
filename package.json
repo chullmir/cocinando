@@ -1,0 +1,27 @@
+{
+  "name": "entrenamente",
+  "version": "1.0.0",
+  "description": "",
+  "main": ".eleventy.js",
+  "dependencies": {
+    "@11ty/eleventy": "^0.12.1",
+    "bootstrap": "^5.2.0",
+    "google-spreadsheet": "^3.1.15",
+    "request": "^2.88.2",
+    "slugify": "^1.5.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yemel/entrenamente.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yemel/entrenamente/issues"
+  },
+  "homepage": "https://github.com/yemel/entrenamente#readme"
+}
