@@ -5,585 +5,158 @@ pagination:
     alias: store
 permalink: "comprar/{{ store.slug }}/"
 ---
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Comprar {{ store.titulo }} | Paradigmas</title>
-  <meta content="width=device-width, initial-scale=1" name="viewport">
-  <!-- Bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-  <link href="/css/normalize.css" rel="stylesheet" type="text/css">
-  <link href="/css/webflow.css" rel="stylesheet" type="text/css">
-  <link href="/css/entrenamente-v4.webflow.css" rel="stylesheet" type="text/css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+  <title>Comprar {{ store.titulo }} | Paradigmas</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta content="{{ store.titulo }}. {{ store.subtitulo }}. {{ store.beneficios }}." name="description">
+  <meta content="" name="keywords">
+  <!-- Meta OG -->
+  <meta property="og:title" content="{{ store.titulo }}">
+  <meta property="og:description" content="{{ store.descripcion }}.{{ store.beneficios }}">
+  <meta property="og:image" content="/images/isotipo_paradigmas.png">
+  <meta property="og:type" content="website">
+  <!-- Favicons -->
+  <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <!-- Vendor CSS Files -->
+  <link href="/assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <!-- Template Main CSS File -->
+  <link href="/assets/css/style.css" rel="stylesheet">
+  <!-- =======================================================
+      * Template Name: Techie - v4.9.0
+      * Template URL: https://bootstrapmade.com/techie-free-skin-bootstrap-3/
+      * Author: BootstrapMade.com
+      * License: https://bootstrapmade.com/license/
+  ======================================================== -->  
 </head>
-
-
-
 <body>
-  <div id="loading-modal" class="div-block-3">
-    <div class="div-block-4"><img src="/images/tenor.gif" loading="lazy" alt="" class="image-3">
-      <div class="text-block-3">Espere unos segundos...</div>
+  
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top ">
+    <div class="container d-flex align-items-center justify-content-between">
+      <h1 class="logo"><a href="/index.html">Paradigmas</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">Nosotros</a></li>
+          <li><a class="nav-link scrollto" href="#services">Habilidades</a></li>
+          <li><a class="nav-link scrollto " href="#portfolio">Productos</a></li>
+          <li><a class="nav-link scrollto" href="#contact">Contacto</a></li>
+          <li><a class="getstarted scrollto" href="#about">Ver más</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
     </div>
-  </div>
-  <div id="terms" data-w-id="0416f216-0988-2a67-b1f6-5668da6798c2" class="modal_container">
-    <div class="modal">
-      <div class="modal-nav">
-        <h3 class="modal-heading">Términos y Condiciones — Política de Privacidad<br></h3><img src="/images/x.svg" loading="lazy" data-w-id="0416f216-0988-2a67-b1f6-5668da6798c8" alt="" class="modal-close">
-      </div>
-      <div class="modal-content">
-        <div class="w-richtext">
-          <h1>Politica de privacidad</h1>
-          <p>Por la mera descarga del contenido, usted adquiere la condición de usuario de la misma. El acceso y uso del contenido es responsabilidad exclusiva del usuario y significan su aceptación y conocimiento como usuario de todas y cada una de las presentes condiciones de uso.</p>
-          <p>Entrenamente podrá denegar o retirar en cualquier momento y sin necesidad de aviso previo, el acceso al contenido a aquellos usuarios que contravengan lo establecido en las presentes condiciones de uso, en la ley, las costumbres o el orden público.</p>
-          <p>El usuario reconoce que todos los elementos del contenido, las marcas, la estructura e información están protegidos por derechos de propiedad intelectual e industrial de Entrenamente o de terceros.</p>
-          <p>La información que facilite el usuario en el curso de la navegación se incorporará a un fichero del que es responsable Entrenamente, para la finalidad de poder enviar información comercial relativa a Entrenamente. Los datos registrados por el usuario son de carácter personal e intransferible.</p>
-          <p>Entrenamente ofrece un servicio de entrenamiento cognitivo no sustituyendo en ningún caso a la terapia neuropsicológica, psicológica o médica. Entrenamente no se hace responsable de un mal uso del contenido por parte del usuario.</p>
-          <p>Siguiendo los principios de licitud, lealtad y transparencia, ponemos a su disposición la presente Política de Privacidad.</p>
-          <p>¿Con qué finalidad tratamos sus datos personales?</p>
-          <p>En Entrenamente tratamos la información que nos facilita con la finalidad de gestionar la relación contractual que nos une, gestionar el envío de la información que nos solicita, facilitar a los interesados ofertas de nuestros servicios y/o productos de su interés y/o gestionar su candidatura.</p>
-          <p>¿Por cuánto tiempo conservaremos sus datos personales?</p>
-          <p>Sus datos, serán conservados el tiempo mínimo necesario para la correcta prestación del servicio ofrecido así como para atender las responsabilidades que se pudieran derivar del mismo y de cualquier otra exigencia legal.</p>
-          <p>¿Cuál es la legitimación para el tratamiento de sus datos?</p>
-          <p>La base legal para el tratamiento de sus datos personales puede ser la ejecución de una relación contractual potencial y/o suscrita, el interés legítimo, la habilitación legal y/o el consentimiento del propio interesado. Los datos que le solicitamos son adecuados, pertinentes y estrictamente necesarios y en ningún caso está obligado a facilitárnoslos, pero su no comunicación podrá afectar a la finalidad del servicio o la imposibilidad de prestarlo.</p>
-          <p>¿A qué destinatarios se comunicarán sus datos?</p>
-          <p>Entrenamente no comunicará sus datos a ningún tercero, salvo que se informe de ello expresamente.</p>
-          <p>¿Cuáles son sus derechos cuando nos facilita sus datos?</p>
-          <p>Los derechos de protección de datos de los que son titulares los interesados son:</p>
-          <p>- Derecho a solicitar el acceso a los datos personales relativos al interesado</p>
-          <ul role="list">
-            <li>Derecho de rectificación o supresión</li>
-            <li>Derecho de oposición</li>
-            <li>Derecho a solicitar la limitación de su tratamiento</li>
-            <li>Derecho a la portabilidad de los datos</li>
-          </ul>
-          <p>Modelos, formularios y más información disponible sobre sus derechos en la página web de la autoridad de control nacional.</p>
-          <p>¿Puedo retirar el consentimiento?</p>
-          <p>Usted tiene la posibilidad y el derecho a retirar el consentimiento para cualquiera finalidad específica otorgada en su momento, sin que ello afecte a la licitud del tratamiento basado en el consentimiento previo a su retirada.</p>
-          <p>¿Dónde puedo reclamar en caso de que considere que no se tratan mis datos correctamente?</p>
-          <p>Si algún interesado considera que sus datos no son tratados correctamente por Entrenamente. puede dirigir sus reclamaciones al correo o a la autoridad de protección de datos que corresponda.</p>
-          <p>Seguridad y actualización de sus datos personales</p>
-          <p>Con el objetivo de salvaguardar la seguridad de sus datos personales, le informamos que Entrenamente ha adoptado todas las medidas de índole técnica y organizativa necesarias para garantizar la seguridad de los datos personales suministrados. Todo ello para evitar su alteración, pérdida, y/o tratamientos o accesos no autorizados, tal como exige la normativa, si bien la seguridad absoluta no existe. Es importante que, para que podamos mantener sus datos personales actualizados, nos informe siempre que se produzca una modificación de los mismos.</p>
-          <p>Confidencialidad</p>
-          <p>Entrenamente le informa que sus datos serán tratados con el máximo celo y confidencialidad por todo el personal que intervenga en cualquiera de las fases del tratamiento. No cederemos ni comunicaremos a ningún tercero sus datos, excepto en los casos legalmente previstos, o salvo que el interesado nos hubiera autorizado expresamente.</p>
-          <h1>Términos y condiciones</h1>
-          <p>Se le informa a los usuarios que accedan o usen los servicios, aplicaciones, herramientas y, en general, contenidos incluidos en Entrenamente de las condiciones generales aplicables al acceso y navegación por el mismo. Utilización de la Aplicación Por la mera descarga de la aplicación, usted adquiere la condición de usuario de la misma. El acceso y uso de la aplicación es responsabilidad exclusiva del usuario y significan su aceptación y conocimiento como usuario de todas y cada una de las presentes condiciones de uso. Entrenamente podrá denegar o retirar en cualquier momento y sin necesidad de aviso previo, el acceso al contenido a aquellos usuarios que contravengan lo establecido en las presentes condiciones de uso, en la ley, las costumbres o el orden público.</p>
-          <p>Contacto</p>
-          <p>Para cualquier comunicación que sea precisa entre Entrenamente y el usuario, éste puede dirigirse a la dirección indicada al principio de las presentes condiciones generales o enviar un e-mail a <a href="mailto:hola@entrenamente.app">hola@entrenamente.app</a>
-          </p>
-          <p>Propiedad intelectual e industrial</p>
-          <p>El usuario reconoce que todos los elementos del contenido, la información y materiales contenidos en el mismo, las marcas, la estructura, selección, ordenación y presentación de sus contenidos, y los programas de ordenador utilizados en relación con ellos, están protegidos por derechos de propiedad intelectual e industrial de Entrenamente o de terceros. El uso del contenido no le atribuye respecto a dichos derechos de propiedad industrial e intelectual ningún otro derecho distinto de los específicamente contemplados en la aplicación u otorgados a tenor de lo dispuesto en la legislación aplicable.</p>
-          <p>Protección de datos personales</p>
-          <p>La información que facilite el usuario en el curso de la navegación se incorporará a un fichero del que es responsable Entrenamente, con el domicilio arriba indicado, para la finalidad de poder enviar información comercial relativa a Entrenamente. Los datos registrados por el usuario son de carácter personal e intransferible. El usuario puede ejercer sus derechos de acceso, rectificación, cancelación y oposición, dirigiéndose por escrito al domicilio arriba indicado, o enviando un e-mail a <a href="mailto:hola@entrenamente.app">hola@entrenamente.app</a>
-          </p>
-          <p>Ultima renovación de la política de privacidad Abril de 2020, Entrenamente se reserva el derecho de cambiar dicha política de privacidad sin previo aviso y poniendo las nuevas condiciones en este documento.</p>
-          <p>Baja del servicio</p>
-          <p>Una vez el cliente se da de baja del servicio de Entrenamente, los datos permanecerán en nuestra base de datos durante un año con la posibilidad de recuperarlos posteriormente se procederá al borrado de datos. El usuario puede ejercer sus derechos de borrado de datos en cualquier momento dirigiéndose por escrito a el domicilio arriba indicado, o enviando un e-mail a <a href="mailto:hola@entrenamente.app">hola@entrenamente.app</a>
-          </p>
-          <p>Responsabilidad</p>
-          <p>Entrenamente no se hace responsable de los perjuicios que se pudieran derivar de, con carácter meramente enunciativo y no limitativo: (i) inferencias, omisiones, interrupciones, virus informáticos, averías y/o desconexiones en el funcionamiento operativo de este sistema electrónico o en los aparatos y equipos informáticos de los usuarios, motivadas por causas ajenas a Entrenamente que impidan o retrasen la prestación de los servicios o la navegación por el sistema; (ii) retrasos o bloqueos en el uso causados por deficiencias o sobrecargas de Internet o en otros sistemas electrónicos; (iii) de la imposibilidad de dar el servicio o permitir el acceso por causas no imputables a Entrenamente, debidas al usuario, a terceros, o a supuestos de fuerza mayor. Entrenamente ofrece un servicio de entrenamiento cognitivo no sustituyendo en ningún caso a la terapia neuropsicológica, psicológica o médica. Entrenamente no se hace responsable de un mal uso de los contenidos por parte del usuario.</p>
-          <p>Entrenamente no se hace responsable de obtener el consentimiento de los datos o imágenes de terceras personas que el cliente introduzca en la aplicación, es la obligación del cliente obtener los consentimientos de dichas personas.</p>
-          <h1>Política de reembolso</h1>
-          <p>Ofrecemos reembolso y/o cambio dentro de los primeros 30 días de tu compra. Si han transcurrido 30 días desde tu compra, no se te ofrecerá un reembolso y/o cambio de ningún tipo.</p>
-          <p><strong>Elegibilidad para reembolsos y cambios</strong></p>
-          <ul role="list">
-            <li>Tu artículo debe estar sin usar y en las mismas condiciones en que lo recibió.</li>
-            <li>Para completar tu devolución, requerimos un recibo o comprobante de compra.</li>
-            <li>Solo se pueden reembolsar los artículos de precio regular; los artículos de venta no se pueden reembolsar.</li>
-            <li>Si el artículo en cuestión fue marcado como un regalo cuando fue comprado y se envió directamente a ti, reenviaremos el contenido a la dirección correcta</li>
-          </ul>
-          <p><strong>Cambios</strong> <em>(si es aplicable)</em></p>
-          <p>Solo reemplazamos los artículos si están defectuosos o dañados. Si necesitas cambiarlo por el mismo artículo, envíanos un email a hola@entrenamente.</p>
-          <p><strong>Bienes Exentos</strong></p>
-          <p>Los siguientes bienes están exentos de reembolsos:</p>
-          <ul role="list">
-            <li>Tarjetas de regalo (gif cards).</li>
-          </ul>
-          <p><strong>Partial refunds are granted</strong> <em>(si es aplicable)</em></p>
-          <ul role="list">
-            <li>Cualquier artículo que no se encuentre en su estado original, esté dañado o falte una parte por razones que no se debieron a nuestro error.</li>
-            <li>Cualquier artículo que se devuelva más de 30 días después de la entrega.</li>
-          </ul>
-          <p>Una vez que se reciba e inspeccione tu devolución, te enviaremos un email para notificarte que hemos recibido tu artículo devuelto. También te notificaremos la aprobación o el rechazo de tu reembolso.</p>
-          <p>Si es aprobado, entonces se procesará tu reembolso y se aplicará un crédito automáticamente a tu tarjeta de crédito o método de pago original, dentro de una cierta cantidad de días.</p>
-          <p><strong>Reembolsos atrasados ​​o faltantes</strong></p>
-          <ul role="list">
-            <li>Si aún no has recibido un reembolso, primero verifica otra vez tu cuenta bancaria. Luego, comunícate con la compañía de tu tarjeta de crédito. Puede tomar algún tiempo antes de que se publique oficialmente tu reembolso.</li>
-            <li>Si has hecho todo esto y aún no has recibido tu reembolso, comunícate con nosotros a <a href="mailto:hola@entrenamente.app">hola@entrenamente.app</a>
-            </li>
-          </ul>
-          <h1>Cookies</h1>
-          <ol role="list">
-            <li>¿Qué son las cookies?</li>
-            <li>La Web de Entrenamente <a href="https://www.entrenamente.app/">www.entrenamente.app</a> utiliza Cookies. Las Cookies son ficheros enviados a un navegador por medio de un servidor web para registrar las actividades del Usuario en una web determinada. La primera finalidad de las Cookies es la de facilitar al usuario un acceso más rápido a los servicios seleccionados. Además, las Cookies personalizan los servicios que ofrece la Web, facilitando y ofreciendo a cada usuario información que es de su interés o que puede ser de su interés, en atención al uso que realiza de los Servicios. La Web utiliza Cookies para personalizar y facilitar al máximo la navegación del usuario. Las Cookies se asocian únicamente a un usuario anónimo y su ordenador y no proporcionan referencias que permitan deducir datos personales del usuario. El usuario podrá configurar su navegador para que notifique y rechace la instalación las Cookies enviadas por la Web, sin que ello perjudique la posibilidad del usuario de acceder a los contenidos de dicha web. Sin embargo, le hacemos notar que, en todo caso, la calidad de funcionamiento de la página Web puede disminuir. Los usuarios registrados, que se registren o que hayan iniciado sesión, podrán beneficiarse de unos servicios más personalizados y orientados a su perfil, gracias a la combinación de los datos almacenados en las cookies con los datos personales utilizados en el momento de su registro. Dichos usuarios autorizan expresamente el uso de esta información con la finalidad indicada, sin perjuicio de su derecho a rechazar o deshabilitar el uso de cookies. Asimismo, la Web podrá saber todos los servicios solicitados por los usuarios, de forma que podrán facilitar u ofrecer información adecuada a los gustos y preferencias de cada usuario.</li>
-            <li>¿Qué tipos de cookies existen?</li>
-            <li>Las Cookies, en función de su Permanencia, pueden dividirse en: Cookies de sesión: Las primeras expiran cuando el usuario cierra el navegador. Cookies persistentes: Las segundas expiran en función de cuando se cumpla el objetivo para el que sirven (por ejemplo, para que el usuario se mantenga identificado en los Servicios) o bien cuando se borran manualmente. Adicionalmente, en función de su Objetivo, las Cookies pueden clasificarse de la siguiente forma: Cookies de rendimiento: Este tipo de Cookie recuerda sus preferencias para las herramientas que se encuentran en los servicios, por lo que no tiene que volver a configurar el servicio cada vez que usted visita. A modo de ejemplo, en esta tipología se incluyen: Ajustes de volumen de reproductores de vídeo o sonido. Las velocidades de transmisión de vídeo que sean compatibles con su navegador.</li>
-          </ol>
-          <p><strong>Cookies de geo-localización:</strong> Estas Cookies son utilizadas para averiguar en qué país se encuentra cuando se solicita un servicio. Esta Cookie es totalmente anónima, y sólo se utiliza para ayudar a orientar el contenido a su ubicación.</p>
-          <p><strong>Cookies de registro:</strong> Las Cookies de registro se generan una vez que el usuario se ha registrado o posteriormente ha abierto su sesión, y se utilizan para identificarle en los servicios con los siguientes objetivos: Mantener al usuario identificado de forma que, si cierra un servicio, el navegador o el ordenador y en otro momento u otro día vuelve a entrar en dicho servicio, seguirá identificado, facilitando así su navegación sin tener que volver a identificarse. Esta funcionalidad se puede suprimir si el usuario pulsa la funcionalidad “cerrar sesión”, de forma que esta Cookie se elimina y la próxima vez que entre en el servicio el usuario tendrá que iniciar sesión para estar identificado.</p>
-          <p>Comprobar si el usuario está autorizado para acceder a ciertos servicios, por ejemplo, para participar en un concurso.</p>
-          <p><strong>Cookies analíticas:</strong> Cada vez que un Usuario visita un servicio, una herramienta de un proveedor externo genera una Cookie analítica en el ordenador del usuario. Esta Cookie que sólo se genera en la visita, servirá en próximas visitas a los Servicios de la Web para identificar de forma anónima al visitante. Los objetivos principales que se persiguen son: Permitir la identificación anónima de los usuarios navegantes a través de la “Cookie” (identifica navegadores y dispositivos, no personas) y por lo tanto la contabilización aproximada del número de visitantes y su tendencia en el tiempo.</p>
-          <p>Identificar de forma anónima los contenidos más visitados y por lo tanto más atractivos para los usuarios.</p>
-          <p>Saber si el usuario que está accediendo es nuevo o repite visita. Importante: Salvo que el usuario decida registrarse en un servicio de la Web, la “Cookie” nunca irá asociada a ningún dato de carácter personal que pueda identificarle. Dichas Cookies sólo serán utilizadas con propósitos estadísticos que ayuden a la optimización de la experiencia de los Usuarios en el sitio. Cookies de publicidad comportamental: Este tipo de “Cookies” permite ampliar la información de los anuncios mostrados a cada usuario anónimo en los Servicios de la Web. Entre otros, se almacena la duración o frecuencia de visualización de posiciones publicitarias, la interacción con las mismas, o los patrones de navegación y/o compartimientos del usuario ya que ayudan a conformar un perfil de interés publicitario. De este modo, permiten ofrecer publicidad afín a los intereses del usuario. Cookies publicitarias de terceros: Además de la publicidad gestionada por la Web en sus Servicios, la Web ofrece a sus anunciantes la opción de servir anuncios a través de terceros (“AdServers”). De este modo, estos terceros pueden almacenar Cookies enviadas desde los Servicios de la Web procedentes de los navegadores de los Usuarios, así como acceder a los datos que en ellas se guardan.</p>
-          <ol start="3" role="list">
-            <li>¿Qué cookies utilizamos?</li>
-            <li>Propias: Son aquéllas que se envían al equipo terminal del usuario desde un equipo o dominio gestionado por el propio editor y desde el que se presta el servicio solicitado por el usuario. De terceros: Son aquéllas que se envían al equipo terminal del usuario desde un equipo o dominio que no es gestionado por el editor, sino por otra entidad que trata los datos obtenidos través de las cookies.</li>
-            <li>¿Cómo deshabilitar las Cookies?</li>
-            <li>Normalmente es posible dejar de aceptar las Cookies del navegador, o dejar de aceptar las Cookies de un Servicio en particular. Todos los navegadores modernos permiten cambiar la configuración de Cookies. Estos ajustes normalmente se encuentran en las “opciones” o “preferencias” del menú de su navegador. Asimismo, puede configurar su navegador o su gestor de correo electrónico, así como instalar complementos gratuitos para evitar que se descarguen los Web Bugs al abrir un email.</li>
-            <li>La Web ofrece orientación al Usuario sobre los pasos para acceder al menú de configuración de las cookies y, en su caso, de la navegación privada en cada uno de los navegadores principales: Internet Explorer: Herramientas -&gt; Opciones de Internet -&gt; Privacidad -&gt; Configuración.</li>
-            <li>Para más información, puede consultar el soporte de Microsoft o la Ayuda del navegador.</li>
-            <li>Firefox: Herramientas -&gt; Opciones -&gt; Privacidad -&gt; Historial -&gt; Configuración personalizada. Chrome: Configuración -&gt; Mostrar opciones avanzadas -&gt; Privacidad -&gt; Configuración de contenido. Safari: Preferencias -&gt; Seguridad. Para más información, puede consultar el soporte de Apple o la Ayuda del navegador.</li>
-            <li>¿Se pueden producir modificaciones de la Política de Cookies?</li>
-          </ol>
-          <p>La Web puede modificar esta Política de Cookies en función de las exigencias legislativas, reglamentarias, o con la finalidad de adaptar dicha política a las instrucciones dictadas por la Agencia Española de Protección de Datos, por ello se aconseja a los usuarios que la visiten periódicamente.</p>
-          <p>La Web puede modificar esta Política de Cookies en función de las exigencias legislativas, reglamentarias, o con la finalidad de adaptar dicha política a las instrucciones dictadas por la Agencia Española de Protección de Datos, por ello se aconseja a los usuarios que la visiten periódicamente.</p>
+  </header><!-- End Header -->
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+    <div class="container-fluid" data-aos="fade-up">
+      <div class="row justify-content-center">
+        <div class="col-xl-5 col-lg-6 pt-3 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
+          <h1>Entrená tu mente</h1>
+          <h2>Los mejores cuadernillos hechos por un equipo de pofresionales líderes.</h2>
+          <div><a href="/tienda/alfa-{{ home.slug }}" class="btn-get-started scrollto">Ver más</a></div>
         </div>
-        <h1>Contacto</h1>
-        <p>Email: hola@entrenamente.app<br>Whatsapp: +54 9 3543 62-8048<br>Correo: 1309 Coffeen Avenue Ste 1200, Sheridan, WY 82801.<br></p>
-        <div class="div-block-5">
-          <a data-w-id="Button" href="#" class="button w-button">VOLVER AL SITIO</a>
+        <div class="col-xl-4 col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="150">
+          <img src="/assets/img/hero-img.png" class="img-fluid animated" alt="">
         </div>
       </div>
     </div>
-  </div>
-
-  <div class="container">
-    <nav class="nav row row-cols-2 bg-info">
-      <div class="d-flex justify-content-start align-items-center">
-        <a href="/h/{{ store.pais }}" class="nav-link"><img src="/images/isotipo_paradigmas.png" alt="Paradigmas" style="width: 50px;"></a>
-      </div>
-      <div class="d-flex justify-content-end align-items-center">
-        <div class="row">
-          <div class="col"><a href="https://wa.me/NUMERO" target="_blank" class=""><img src="/images/whatsapp_light.svg"alt="Whatsapp"></a></div>
-          <div class="col"><a href="https://www.instagram.com/paradigmas/" target="_blank" class=""><img src="/images/instagram_light.svg"alt=""></a></div>
-        </div>
-      </div>
-    </nav>
-
-    <div class="wrapper"></div>
-
-    <div class="carrito" style="background: purple;">
-      <h2>Tu carrito</h2>
-      <form id="email-form" name="email-form" data-name="Email Form" method="post" action="https://hook.us1.make.com/CAMBIAR" class="form">
-        <div class="w-embed"><input type="hidden" name="cart-code" value="{{ store.slug }}">
-          <input type="hidden" id="geo-country" name="geo-country" value="">
-          <input type="hidden" id="geo-region" name="geo-region" value="">
-          <input type="hidden" id="geo-city" name="geo-city" value="">
-        </div>
-
-
-
-
-
-
-
-
-
-      </form>
-      <div class="row">
-        <div class="col bg-warning border border-primary">
-          <h4>Resumen de tu compra</h4>
-          <div class="row bg-info">
-            <div class="col">
-              <p>{{  store.titulo  }}</p>
-            </div>
-            <div class="col">
-              <p>{{ store.simbolo }} {{ store.precio-original }}</p>
-            </div>
-          </div>
-          <div class="row bg-danger">
-            <div class="col">
-              <p>PROMO {{ store.descuento-porcentual }}% OFF</p>
-            </div>
-            <div class="col">
-              <p>- {{ store.simbolo }}{{ store.descuento-neto }} </p>
-            </div>
-          </div>
-          <div class="row bg-primary">
-            <h4>Upsale?</h4>
-            <div class="row bg-secondary">
-              <div class="col">
-                <input type="checkbox" name="" id=""><p>{{  store.titulo  }}</p>
-                <p></p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <h4>Ingresa tus datos</h4>
-        </div>
-      </div>
-    </div>
-
-
-    
-
-  </div>
-
-  <div class="hero-shrink">
-    <div class="big-header">
+  </section><!-- End Hero -->
+  
+  
+  
+  
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
       <div class="container">
-        <div class="navbar">
-          <a href="/h/{{ store.pais }}" class="brand homelink w-inline-block"><img src="/images/isotipo-entrenamente.png" loading="lazy" alt="" class="isotipo"><img src="/images/logo.svg" loading="lazy" alt="" class="logotipo"></a>
-          <div class="nav_icons">
-            
-            
+        <div class="row">
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3>Paradigmas</h3>
+            <p>
+              <strong>WhatsApp:</strong> +1 5589 55488 55<br>
+              <strong>Email:</strong> info@paradigmas.com<br>
+            </p>
           </div>
-        </div>
-
-
-        <div class="ch_wrapper">
-          <div class="ch_left"><img src="{{ store.portada }}" loading="lazy" width="200" alt="" class="checkout_book"></div>
-          <div class="ch_right">
-            <p class="pill">{{ store.titulo }}</p>
-            <h1 class="hero_title hero_title-left">Estás a un <strong>Click</strong><br>de conseguirlo</h1>
-            <p class="checkout-p">Una vez realizado el pago recibirás el contenido digital en tu correo electrónico, listo para imprimir o disfrutar digitalmente</p>
-            <div class="bhp_cols w-row">
-              <div class="bhp_col-left w-col w-col-6">
-                <a href="#checkout" class="hero-notice">Completá tus datos ↓</a>
-              </div>
-              <div class="bhp_col-right w-col w-col-6"><img src="/images/securidad_white-transparent.png" loading="lazy" alt="sitio seguro"></div>
-            </div>
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Links útiles</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Nosotros</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Beneficios</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Términos y condiciones</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Política de privacidad</a></li>
+            </ul>
           </div>
-        </div>
-      </div>
-    </div>
-  </div>
 
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Nuestros servicios</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+            </ul>
+          </div>
 
-
-  <div id="checkout" class="checkout">
-    <div class="container">
-      <div class="checkout_wrapper">
-        <h3 class="section-title">Tu Carrito</h3>
-        <div class="panel-wrapper">
-          <div class="form-block w-form">
-            <form id="email-form" name="email-form" data-name="Email Form" method="post" action="https://hook.us1.make.com/qqy7ed5466rgpl9zrjvka8fjitzgrt6o" class="form">
-              <div class="w-embed"><input type="hidden" name="cart-code" value="{{ store.slug }}">
-                <input type="hidden" id="geo-country" name="geo-country" value="">
-                <input type="hidden" id="geo-region" name="geo-region" value="">
-                <input type="hidden" id="geo-city" name="geo-city" value="">
-              </div>
-              <div class="panel-left">
-                <div class="resume-top">
-                  <div class="panel-title">Resumen de tu Compra</div>
-                  <div class="cart-item_wrapper">
-                    <div class="cart-item">
-                      <div class="item-title">{{ store.titulo }}</div>
-                    </div>
-                    <div class="container-4 w-container">
-                      <div class="item-price">{{ store.simbolo }}</div>
-                      <div class="item-price format-number">{{ store.precio-original }}</div>
-                    </div>
-                  </div>
-                  <div class="cart-item_wrapper">
-                    <div class="cart-item">
-                      <div class="item-discount mright">PROMO </div>
-                      <div class="item-discount">{{ store.descuento-porcentual }}</div>
-                      <div class="item-discount">% OFF</div>
-                    </div>
-                    <div class="container-3 w-container">
-                      <div class="item-price">-</div>
-                      <div class="item-price">{{ store.simbolo }}{{ store.descuento-neto }}</div>
-                      <div class="item-price format-number"></div>
-                    </div>
-                  </div>
-
-                  {% if store.valor-upsale-1 > 0 %}
-
-                  <div class="upsale_wrapper">
-                    <div class="item-title">¿Quieres sumar esta oferta exclusiva a tu compra?</div>
-                    <div class="div-block-2"></div><label class="w-checkbox checkbox-field interactiv">
-                      <div class="w-checkbox-input w-checkbox-input--inputType-custom checkbox"></div><input type="checkbox" id="upsale-1" name="upsale-1" data-name="upsale-1" style="opacity:0;position:absolute;z-index:-1"><span for="upsale-1" class="checkbox-label w-form-label">{{ store.titulo-upsale-1 }}</span>
-                      <div class="container-6 w-container">
-                        <div>+</div>
-                        <div>{{ store.simbolo }}</div>
-                        <div class="format-number">{{ store.valor-upsale-1 }}</div>
-                      </div>
-                    </label>
-                    <div class="checkbox_description interactiv">{{ store.texto-upsale-1 }}</div>
-
-                    {% if store.valor-upsale-2 > 0 %}
-
-                    <div class="div-block-2 interactiv"></div><label class="w-checkbox checkbox-field">
-                      <div class="w-checkbox-input w-checkbox-input--inputType-custom checkbox"></div><input type="checkbox" id="upsale-2" name="upsale-2" data-name="upsale-2" style="opacity:0;position:absolute;z-index:-1"><span for="upsale-2" class="checkbox-label w-form-label">{{ store.titulo-upsale-2 }}</span>
-                      <div class="container-6 w-container">
-                          <div>+</div>
-                          <div>{{ store.simbolo }}</div>
-                          <div class="format-number">{{ store.valor-upsale-2 }}</div>
-                      </div>
-                    </label>
-                    <div class="checkbox_description">{{ store.texto-upsale-2 }}</div>
-
-                    {% endif %}
-                    
-                  </div>
-
-
-
-
-
-                  {% endif %}
-
-
-                </div>
-                <div class="resume-bottom">
-                  <div class="total_wrapper price-1">
-                    <div class="panel-title">TOTAL:</div>
-                    <div class="container-5 w-container">
-                      <div class="item-price-total">{{ store.simbolo }}</div>
-                      <div class="item-price-total format-number">{{ store.precio-total-1 }}</div>
-                    </div>
-                  </div>
-                  <div class="total_wrapper price-2">
-                    <div class="panel-title">TOTAL:</div>
-                    <div class="container-5 w-container">
-                        <div class="item-price-total">{{ store.simbolo }}</div>
-                        <div class="item-price-total format-number">{{ store.precio-total-2 }}</div>
-                    </div>
-                  </div>
-                  <div class="total_wrapper price-3">
-                    <div class="panel-title">TOTAL:</div>
-                    <div class="container-5 w-container">
-                        <div class="item-price-total">{{ store.simbolo }}</div>
-                        <div class="item-price-total format-number">{{ store.precio-total-3 }}</div>
-                    </div>
-                  </div>
-                  <div class="total_wrapper price-4">
-                    <div class="panel-title">TOTAL:</div>
-                    <div class="container-5 w-container">
-                        <div class="item-price-total">{{ store.simbolo }}</div>
-                        <div class="item-price-total format-number">{{ store.precio-total-4 }}</div>
-                    </div>
-                  </div>
-                  <p class="item-description">Pago por única vez. </p>
-                  <div class="container-7 w-container">
-                    <p class="item-description">Precios expresados en </p>
-                    <p class="item-description">{{ store.moneda }}.</p>
-                  </div>
-                </div>
-              </div>
-
-
-
-
-
-              <div class="panel-right">
-                <div class="panel-title">Ingresa tus Datos</div><input type="text" class="field w-input" maxlength="256" name="name" data-name="Name" placeholder="Tu Nombre *" id="name" required=""><input type="text" class="field w-input" maxlength="256" name="apellido" data-name="Apellido" placeholder="Apellido *" id="apellido" required="">
-                <div class="panel-title">¿Dónde deseas recibir tu Cuadernillo?</div><input type="email" class="field w-input" maxlength="256" name="email" data-name="Email" placeholder="Email (Ej. tunombre@gmail.com) *" id="email" required="">
-                
-                {% assign options = store | hasPaymentOptions %}
-                {% if options %}
-                <div class="panel-title">Elige la forma de Pago</div>
-                <label class="w-radio">
-                  <div class="w-form-formradioinput w-form-formradioinput--inputType-custom radio-button w-radio-input w--redirected-checked"></div>
-                  <input type="radio" checked="checked" data-name="MediodePago" id="Tarjeta" name="MediodePago" value="Stripe" style="opacity:0;position:absolute;z-index:-1">
-                  <span for="Tarjeta" class="radio-button-label w-form-label">Tarjeta de Crédito/Débito</span>
-                </label>
-                <!-- <label class="w-radio">
-                  <div class="w-form-formradioinput w-form-formradioinput--inputType-custom radio-button w-radio-input"></div>
-                  <input type="radio" data-name="MediodePago" id="Paypal" name="MediodePago" value="Paypal" style="opacity:0;position:absolute;z-index:-1">
-                  <span for="Paypal" class="radio-button-label w-form-label">Paypal</span>
-                </label> -->
-                <!-- <label class="w-radio">
-                  <div class="w-form-formradioinput w-form-formradioinput--inputType-custom radio-button w-radio-input"></div>
-                  <input type="radio" data-name="MediodePago" id="MercadoPago" name="MediodePago" value="MercadoPago" style="opacity:0;position:absolute;z-index:-1">
-                  <span for="MercadoPago" class="radio-button-label w-form-label">MercadoPago</span>
-                </label> -->
-                <br/>
-                {% elsif store.pais == "ars" %}
-                  <input type="hidden" name="MediodePago" value="Mercadopago">
-                {% else %}
-                  <input type="hidden" name="MediodePago" value="Stripe">
-                {% endif %}
-
-                <input type="submit" value="Continuar con la Compra" data-wait="Procesando..." class="btn_submit w-button">
-              </div>
+          <div class="col-lg-4 col-md-6 footer-newsletter">
+            <h4>Unite a nuestro Newsletter</h4>
+            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+            <form action="" method="post">
+              <input type="email" name="email"><input type="submit" value="Subscribirse">
             </form>
-            <div class="w-form-done">
-              <div>Thank you! Your submission has been received!</div>
-            </div>
-            <div class="w-form-fail">
-              <div>Oops! Algo no salió bien al procesar tu pago. Por favor intenta nuevamente.</div>
-            </div>
           </div>
         </div>
       </div>
-      <div class="w-layout-grid checkout-icons">
-        <div id="w-node-d456435a-865d-04f1-6fbc-8eb9f88d38aa-4eaf0855" class="safety-desc"><img src="/images/privacy.svg" loading="lazy" alt="protegemos tu privacidad" class="safety-icon">
-          <div>Protegemos tu Privacidad</div>
-        </div>
-        <div id="w-node-d456435a-865d-04f1-6fbc-8eb9f88d38ae-4eaf0855" class="safety-desc"><img src="/images/ssl_02.svg" loading="lazy" alt="datos seguros" class="safety-icon">
-          <div>Tus Datos están Seguros</div>
-        </div>
-        <div id="w-node-d456435a-865d-04f1-6fbc-8eb9f88d38b2-4eaf0855" class="safety-desc"><img src="/images/ribbon.svg" loading="lazy" alt="garantía de satisfacción" class="safety-icon">
-          <div>Garantía de Satisfacción</div>
-        </div>
-      </div>
     </div>
-  </div>
-  <div class="references">
     <div class="container">
-      <div class="ref_wrapper">
-        <h3 class="section-title">Lo que dicen de nosotros</h3>
-        <div class="collection-list-wrapper w-dyn-list">
-          <div role="list" class="collection-list w-dyn-items w-row">
-            <div role="listitem" class="collection-item w-dyn-item w-col w-col-4">
-                <div data-w-id="c37400fe-85fb-f1fb-d0f0-4e13bb558e6b" class="ref_card">
-                  <p class="ref_card-desc">{{ resenas.0.comentario }}</p>
-                  <div class="div-block-7"><img src="{{ resenas.0.imagen }}" loading="lazy" alt="" class="ref_img_small">
-                    <div class="ref_author">
-                      <div class="ref_card-stars"><img src="/images/Stars.svg" loading="lazy" alt=""></div>
-                      <div class="ref_card-attr">
-                        <div class="ref_card-name">{{ resenas.0.nombre }}</div>
-                        <div class="ref_card-location">{{ resenas.0.pais }}</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div role="listitem" class="collection-item w-dyn-item w-col w-col-4">
-                <div data-w-id="c37400fe-85fb-f1fb-d0f0-4e13bb558e6b" class="ref_card">
-                  <p class="ref_card-desc">{{ resenas.1.comentario }}</p>
-                  <div class="div-block-7"><img src="{{ resenas.1.imagen }}" loading="lazy" alt="" class="ref_img_small">
-                    <div class="ref_author">
-                      <div class="ref_card-stars"><img src="/images/Stars.svg" loading="lazy" alt=""></div>
-                      <div class="ref_card-attr">
-                        <div class="ref_card-name">{{ resenas.1.nombre }}</div>
-                        <div class="ref_card-location">{{ resenas.1.pais }}</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            <div role="listitem" class="collection-item w-dyn-item w-col w-col-4">
-              <div data-w-id="c37400fe-85fb-f1fb-d0f0-4e13bb558e6b" class="ref_card">
-                <p class="ref_card-desc">{{ resenas.2.comentario }}</p>
-                <div class="div-block-7"><img src="{{ resenas.2.imagen }}" loading="lazy" alt="" class="ref_img_small">
-                  <div class="ref_author">
-                    <div class="ref_card-stars"><img src="/images/Stars.svg" loading="lazy" alt=""></div>
-                    <div class="ref_card-attr">
-                      <div class="ref_card-name">{{ resenas.2.nombre }}</div>
-                      <div class="ref_card-location">{{ resenas.2.pais }}</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+      <div class="copyright-wrap d-md-flex py-4">
+        <div class="me-md-auto text-center text-md-start">
+          <div class="copyright">
+            &copy; Copyright <strong><span>Paradigmas</span></strong>. Todos los derechos reservados
           </div>
+        </div>
+        <div class="social-links text-center text-md-right pt-3 pt-md-0">
+          <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+          <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+          <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
         </div>
       </div>
     </div>
-  </div>
-  <div class="w-embed w-script">
-    <script>fbq('track', 'AddToCart');</script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" crossorigin="anonymous"></script>
-    <script src="https://js.stripe.com/v3/"></script>
-    <script>
-$(function(){
-  const params = new URLSearchParams(window.location.search);
-  if(params.get('utm_source')) localStorage['utm-source'] = params.get('utm_source'); 
-  if(params.get('utm_medium')) localStorage['utm-medium'] = params.get('utm_medium');
-  if(params.get('utm_campaign')) localStorage['utm-campaign'] = params.get('utm_campaign');
-  if(params.get('utm_content')) localStorage['utm-content'] = params.get('utm_content');
-  if(params.get('adname')) localStorage['adname'] = params.get('adname');
+  </footer><!-- End Footer -->
+  
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <div id="preloader"></div>
 
-	var stripe = Stripe('pk_live_51HYviJBBFmF8hFP1KVqyw2jJVOREAMRoqcV5NBvescL5mlnhaVWSbO48SWFj1PLCv1yx1WOYeUYMb6AK9SZ5Qtux00Sc8XKCC1');
-  $('#email-form').submit(function() {
-	  fbq('track', 'InitiateCheckout');
-  	$('#loading-modal').css('display', 'flex');
-    $('input').blur();
-    console.log('sending data');
-    $.ajax({
-      url: $('#email-form').attr('action'),
-      type: "post",
-      data: { 
-        apellido: $('#apellido').val(), 
-        name: $('#name').val(),
-        email: $('#email').val(),
-        'cart-code': '{{ store.slug }}',
-        'gateway': $("input[name='MediodePago']:checked").val() || $("input[name='MediodePago']").val(),
-        'geo-country': $('#geo-country').val(),
-        'geo-region': $('#geo-region').val(),
-        'geo-city': $('#geo-city').val(),
-        'utm-source': localStorage['utm-source'],
-        'utm-medium': localStorage['utm-medium'],
-        'utm-campaign': localStorage['utm-campaign'],
-        'utm-content': localStorage['utm-content'],
-        'adname': localStorage['adname'],
-        'upsale-1': $('#upsale-1').prop('checked'),
-				'upsale-2': $('#upsale-2').prop('checked'),
-        'user-agent': navigator.userAgent,
-      },
-      success: function(data, textStatus, xhr) {
-        if (xhr.status == 200) {
-          window.location = data; // mercadopago
-        } else if (xhr.status == 202) {
-	        return stripe.redirectToCheckout({ sessionId: data });
-        } else {
-          $('#loading-modal').css('display', 'none');
-	      	alert('Ha ocurrido un error, por favor verifique los datos e inténtelo nuevamente.');
-        }
-      },
-      error: function(xhr) {
-        $('#loading-modal').css('display', 'none');
-      	alert('Ha ocurrido un error, por favor verifique los datos e inténtelo nuevamente.');
-       }
-    });
-    return false;
-  });
-	$.getJSON("https://ipgeolocation.abstractapi.com/v1/?api_key=c63a3e7fde864dc8b94e9c9d3f5f048b", function(data) {
-  	$('#geo-country').val(data.country);
-    $('#geo-region').val(data.region);
-    $('#geo-city').val(data.city);
-	})
-  function updatePrices() {
-  	var upsale1 = $('#upsale-1').prop('checked');
-    var upsale2 = $('#upsale-2').prop('checked');
-    $('.total_wrapper').hide();
-    if (!upsale1 && !upsale2) {
-    	$('.price-1').show();
-    } else if (upsale1 && !upsale2) {
-    	$('.price-2').show();
-    } else if (!upsale1 && upsale2) {
-    	$('.price-3').show();
-    } else {
-    	$('.price-4').show();
-    }
- 	}
-	updatePrices();
-  $('#upsale-2').change(updatePrices);
-  $('#upsale-1').change(updatePrices);
-  $('.format-number').each(function(i, e) {
-  	var formated = $(e).text().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-    $(e).text(formated);
-  });
-})
-</script>
-  </div>
-  <div class="footer">
-    <div class="container">
-      <div class="footer_wrapper">
-        <h1 class="footer_title"><strong class="bold-text">¿Deseas más información?</strong></h1>
-        <div class="footer_content">
-          <div class="footer_subtitle">Escribinos a </div>
-          <a href="mailto:hola@entrenamente.app?subject=Solicitud%20de%20Informaci%C3%B3n%20desde%20la%20web" class="footer-link">hola@entrenamente.app</a>
-        </div>
-        <div data-w-id="d456435a-865d-04f1-6fbc-8eb9f88d38c2" class="footer_btn">
-          <a data-w-id="d456435a-865d-04f1-6fbc-8eb9f88d38c3" href="https://wa.me/5493543628048" target="_blank" class="btn_wp w-inline-block"><img src="/images/whatsapp_light.svg" loading="lazy" alt="Whatsapp" class="btn_ico">
-            <div data-w-id="d456435a-865d-04f1-6fbc-8eb9f88d38c5" class="btn_txt">Hablemos por Whatsapp</div>
-          </a>
-        </div>
-        <a href="#checkout" class="hero-notice bottom">Volver a tu Carrito ☝️</a>
-      </div>
-      <div class="footer_navbar">
-        <a href="/h/{{ store.slug }}" class="brand homelink w-inline-block"><img src="/images/logo.png" loading="lazy" height="60" alt=""></a>
-        <a data-w-id="4c1f281c-1d28-0608-531b-945bdab1f5d0" href="#terms" class="footer_link">Términos &amp; Condiciones</a>
-      </div>
-    </div>
-  </div>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+  <!-- Vendor JS Files -->
+  <script src="/assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="/assets/vendor/aos/aos.js"></script>
+  <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="/assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="/assets/vendor/php-email-form/validate.js"></script>
+  <script src="/assets/vendor/jquery/jquery-3.6.1.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="/assets/js/main.js"></script>
+
+  
+  
 </body>
 </html>
