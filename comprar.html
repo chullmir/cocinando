@@ -6,8 +6,9 @@ pagination:
 permalink: "comprar/{{ store.slug }}/"
 ---
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon">
   <title>Comprar {{ store.titulo }} | Paradigmas</title>
@@ -77,52 +78,6 @@ permalink: "comprar/{{ store.slug }}/"
     </div>
   </section><!-- End Hero -->
 
-  <!-- ======= Producto Section ======= -->
-  <section id="features" class="features">
-    <div class="container" data-aos="fade-up">
-        <div class="section-title">
-            <h2>{{ store.titulo }}</h2>
-            <p>{{ store.subtitulo }}</p>
-        </div>
-
-        <div class="row">
-            <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column align-items-lg-center">
-                <div class="icon-box mt-5 mt-lg-0" data-aos="fade-up" data-aos-delay="100">
-                    <i class="bx bx-receipt"></i>
-                    <h4>{{ store.beneficios1 }}</h4>
-                    <p>{{ store.descripcion }}</p>
-                </div>
-                <div class="icon-box mt-5" data-aos="fade-up" data-aos-delay="200">
-                    <i class="bx bx-cube-alt"></i>
-                    <h4>{{ store.beneficios2 }}</h4>
-                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
-                </div>
-                <div class="icon-box mt-5" data-aos="fade-up" data-aos-delay="300">
-                    <i class="bx bx-images"></i>
-                    <h4>{{ store.beneficios3 }}</h4>
-                    <p>Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere</p>
-                </div>
-                <div class="icon-box mt-5" data-aos="fade-up" data-aos-delay="400">
-                    <i class="bx bx-shield"></i>
-                    <h4>{{ store.beneficios4 }}</h4>
-                    <p>Expedita veritatis consequuntur nihil tempore laudantium vitae denat pacta</p>
-                </div>
-                <div class="">
-                    <p>Comprar con descuento</p>
-                    <div class="current-price">{{  store.simbolo  }} <span class="format-number">{{ store.precio-total-1 }}</span></div>
-                    <div class="old-price"><del>{{ store.simbolo }} <span class="format-number">{{ store.precio-original }}</span></del></div>
-                    <div class="p region">{{ store.moneda }}s</div>
-                    <a href="/comprar/{{ store.slug }}" class="btn_light w-button">Comprar Ahora</a>
-
-                </div>
-            </div>
-            <div class="image col-lg-6 order-1 order-lg-2 " data-aos="zoom-in" data-aos-delay="100">
-                <img src="/assets/img/productos/alfa.jpg" alt="" class="img-fluid">
-            </div>
-        </div>
-    </div>
-  </section><!-- End Producto Section -->
-
   <!-- ======= Contact Section ======= -->
   <section id="contact" class="contact section-bg">
     <div class="container" data-aos="fade-up">
@@ -131,21 +86,11 @@ permalink: "comprar/{{ store.slug }}/"
         <h2>Mi Carrito</h2>
         <p class="">Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
       </div>
-      
-      
-      
-      
-      <form id="email-form" name="email-form" data-name="Email Form" method="post" action="https://hook.us1.make.com/n14b8s2eq0nksvgevavopxyck8xt7fxt">
-        
-        
+      <form id="email-form" name="email-form" data-name="Email Form" method="post" action="https://hook.us1.make.com/n14b8s2eq0nksvgevavopxyck8xt7fxt">  
         <div class="row">
-
-
           <div class="col-lg-6">
             <div class="info-box mb-4">
-              
               <h3>Resumen de tu compra</h3>
-
               <div class="card">
                 <div class="card-body">
                   <div class="d-flex flex-row">
@@ -172,7 +117,6 @@ permalink: "comprar/{{ store.slug }}/"
                 </div>
               </div>
 
-
               {% if store.valor-upsale-1 > 0 %}
               <div class="card mt-3">
                 <div class="card-body">
@@ -184,7 +128,6 @@ permalink: "comprar/{{ store.slug }}/"
                   </div>
                   
                   <div class="d-flex flex-row">
-                    
                     <div class="col item-title">
                       <input type="checkbox" id="upsale-1" name="upsale-1" data-name="upsale-1"><span for="upsale-1" class="checkbox-label w-form-label">{{ store.titulo-upsale-1 }}</span>
                     </div>
@@ -193,7 +136,6 @@ permalink: "comprar/{{ store.slug }}/"
                       <span>{{ store.simbolo }}</span>
                       <span>{{ store.valor-upsale-1 }}</span>
                     </div>
-
                   </div>
 
                   <div class="row">
@@ -332,6 +274,54 @@ permalink: "comprar/{{ store.slug }}/"
 
     </div>
   </section><!-- End Contact Section -->
+
+  <!-- ======= Producto Section ======= -->
+  <section id="features" class="features">
+    <div class="container" data-aos="fade-up">
+        <div class="section-title">
+            <h2>{{ store.titulo }}</h2>
+            <p>{{ store.subtitulo }}</p>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column align-items-lg-center">
+                <div class="icon-box mt-5 mt-lg-0" data-aos="fade-up" data-aos-delay="100">
+                    <i class="bx bx-receipt"></i>
+                    <h4>{{ store.beneficios1 }}</h4>
+                    <p>{{ store.descripcion }}</p>
+                </div>
+                <div class="icon-box mt-5" data-aos="fade-up" data-aos-delay="200">
+                    <i class="bx bx-cube-alt"></i>
+                    <h4>{{ store.beneficios2 }}</h4>
+                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
+                </div>
+                <div class="icon-box mt-5" data-aos="fade-up" data-aos-delay="300">
+                    <i class="bx bx-images"></i>
+                    <h4>{{ store.beneficios3 }}</h4>
+                    <p>Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere</p>
+                </div>
+                <div class="icon-box mt-5" data-aos="fade-up" data-aos-delay="400">
+                    <i class="bx bx-shield"></i>
+                    <h4>{{ store.beneficios4 }}</h4>
+                    <p>Expedita veritatis consequuntur nihil tempore laudantium vitae denat pacta</p>
+                </div>
+                <div class="">
+                    <p>Comprar con descuento</p>
+                    <div class="current-price">{{  store.simbolo  }} <span class="format-number">{{ store.precio-total-1 }}</span></div>
+                    <div class="old-price"><del>{{ store.simbolo }} <span class="format-number">{{ store.precio-original }}</span></del></div>
+                    <div class="p region">{{ store.moneda }}s</div>
+                    <a href="/comprar/{{ store.slug }}" class="btn_light w-button">Comprar Ahora</a>
+
+                </div>
+            </div>
+            <div class="image col-lg-6 order-1 order-lg-2 " data-aos="zoom-in" data-aos-delay="100">
+                <img src="/assets/img/productos/alfa.jpg" alt="" class="img-fluid">
+            </div>
+        </div>
+    </div>
+  </section><!-- End Producto Section -->
+
+
   
   
   
@@ -433,9 +423,9 @@ permalink: "comprar/{{ store.slug }}/"
 
       $('#email-form').submit(function() {
         // alert("Hello! I am an alert box!");
-        // fbq('track', 'InitiateCheckout');
-        // $('#loading-modal').css('display', 'flex'); // VER ESTO DE ACA
-        // $('input').blur();    
+        fbq('track', 'InitiateCheckout');
+        $('#loading-modal').css('display', 'flex'); // VER ESTO DE ACA
+        $('input').blur();    
         
         $.ajax({
           url: $('#email-form').attr('action'),
@@ -456,7 +446,7 @@ permalink: "comprar/{{ store.slug }}/"
             'adname': localStorage['adname'],
             'upsale-1': $('#upsale-1').prop('checked'),
             'upsale-2': $('#upsale-2').prop('checked'),
-            // 'user-agent': navigator.userAgent,
+            'user-agent': navigator.userAgent,
           },
           success: function(data, textStatus, xhr) {
             if (xhr.status == 200) {
@@ -465,12 +455,12 @@ permalink: "comprar/{{ store.slug }}/"
               return stripe.redirectToCheckout({ sessionId: data });
             } else {
               $('#loading-modal').css('display', 'none'); // VER ESTO
-              alert('Ha ocurrido un error, por favor verifique los datos e inténtelo nuevamente.');
+              alert('Ha ocurrido un error (1), por favor verifique los datos e inténtelo nuevamente.');
             }
           },
           error: function(xhr) {
             $('#loading-modal').css('display', 'none'); // VER ESTO
-            alert('Ha ocurrido un error, por favor verifique los datos e inténtelo nuevamente.');
+            alert('Ha ocurrido un error (2), por favor verifique los datos e inténtelo nuevamente.');
           }
         });
         return false;

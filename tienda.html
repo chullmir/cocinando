@@ -3,12 +3,13 @@ pagination:
     data: tiendas
     size: 1
     alias: store
-permalink: "tiendaNEW/{{ store.slug }}/"
+permalink: "tienda/{{ store.slug }}/"
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon">
     <title>{{ store.titulo }} | Paradigmas</title>
@@ -50,7 +51,7 @@ permalink: "tiendaNEW/{{ store.slug }}/"
     <!-- ======= Header ======= -->
     <header id="header" class="fixed-top ">
         <div class="container d-flex align-items-center justify-content-between">
-        <h1 class="logo"><a href="/index.html">Paradigmas</a></h1>
+        <h1 class="logo"><a href="/h/{{ store.pais }}">Paradigmas</a></h1>
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
