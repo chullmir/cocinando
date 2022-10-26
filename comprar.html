@@ -423,9 +423,10 @@ permalink: "comprar/{{ store.slug }}/"
 
       $('#email-form').submit(function() {
         // alert("Hello! I am an alert box!");
-        fbq('track', 'InitiateCheckout');
-        $('#loading-modal').css('display', 'flex'); // VER ESTO DE ACA
-        $('input').blur();    
+        // fbq('track', 'InitiateCheckout');
+        // $('#loading-modal').css('display', 'flex'); // VER ESTO DE ACA
+        // $('input').blur();
+        console.log('sending data');
         
         $.ajax({
           url: $('#email-form').attr('action'),
@@ -446,6 +447,7 @@ permalink: "comprar/{{ store.slug }}/"
             'adname': localStorage['adname'],
             'upsale-1': $('#upsale-1').prop('checked'),
             'upsale-2': $('#upsale-2').prop('checked'),
+            'exito': 'si',
             'user-agent': navigator.userAgent,
           },
           success: function(data, textStatus, xhr) {
