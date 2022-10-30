@@ -34,7 +34,7 @@
     <!-- ======= Header ======= -->
     <header id="header" class="fixed-top ">
         <div class="container d-flex align-items-center justify-content-between">
-        <h1 class="logo"><a href="/h/{{home.slug}}">Paradigmas</a></h1>
+        <h1 class="logo"><a href="">Paradigmas</a></h1>
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
@@ -45,13 +45,44 @@
             <li><a class="nav-link scrollto" href="#services">Habilidades</a></li>
             <li><a class="nav-link scrollto " href="#portfolio">Productos</a></li>
             <li><a class="nav-link scrollto" href="#contact">Contacto</a></li>
-            <li><a class="getstarted scrollto" href="/tienda/alfa-{{ home.slug }}">Ver más</a></li>
             </ul>
             <i class="bi bi-list mobile-nav-toggle"></i>
         </nav><!-- .navbar -->
 
         </div>
     </header><!-- End Header -->
+    <!-- ======= Hero Section ======= -->
+    <section id="hero" class="d-flex align-items-center">
+        <div class="container">
+            <div class="row">
+                
+
+            </div>
+            
+
+        </div>
+
+        <div class="container-fluid" data-aos="fade-up">
+        <div class="row justify-content-center">
+            
+            <div class="row">
+                {%- for home in homes -%}
+                <div class="card" style="width: 18rem;">
+                    <a href="/h/{{ home.slug }}"><img src="{{ home.bandera }}" class="card-img-top" alt="{{ home.nombre }}"></a>
+                    <div class="card-body">
+                        <a href="/h/{{ home.slug }}" class="btn btn-primary">{{ home.nombre }}</a>
+                    </div>
+                </div>
+                {%- endfor -%}
+            </div>
+            
+            <div class="col-xl-4 col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="150">
+            <img src="/assets/img/hero-img.png" class="img-fluid animated" alt="">
+            </div>
+        </div>
+        </div>
+
+    </section><!-- End Hero -->
 
     <div class="container">
         <div class="row">
@@ -66,6 +97,71 @@
         </div>
     </div>
 
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-3 col-md-6 footer-contact">
+                        <h3>Paradigmas</h3>
+                        <p>
+                            <strong>WhatsApp:</strong> +1 5589 55488 55<br>
+                            <strong>Email:</strong> info@paradigmas.com<br>
+                        </p>
+                    </div>
+
+                    <div class="col-lg-2 col-md-6 footer-links">
+                        <h4>Links útiles</h4>
+                        <ul>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Nosotros</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Beneficios</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Términos y condiciones</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Política de privacidad</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 footer-links">
+                        <h4>Nuestros servicios</h4>
+                        <ul>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 footer-newsletter">
+                        <h4>Unite a nuestro Newsletter</h4>
+                        <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+                        <form action="" method="post">
+                            <input type="email" name="email"><input type="submit" value="Subscribirse">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="copyright-wrap d-md-flex py-4">
+                <div class="me-md-auto text-center text-md-start">
+                    <div class="copyright">
+                        &copy; Copyright <strong><span>Paradigmas</span></strong>. Todos los derechos reservados
+                    </div>
+                    
+                </div>
+                <div class="social-links text-center text-md-right pt-3 pt-md-0">
+                    <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                    <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                    <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer><!-- End Footer -->
+
 
 
     <!-- Vendor JS Files -->
@@ -73,19 +169,19 @@
     <script src="/assets/vendor/jquery/jquery-3.6.1.min.js"></script>
     
     <script>
-        $(function(){
-            $.getJSON("https://ipgeolocation.abstractapi.com/v1/?api_key=c63a3e7fde864dc8b94e9c9d3f5f048b", function(data) {
-                if(data.country_code == 'AR') window.location = '/h/ars';
-                if(data.country_code == 'CL') window.location = '/h/clp';
-                if(data.country_code == 'MX') window.location = '/h/mxn';
-                if(data.country_code == 'ES') window.location = '/h/eur';
-                if(data.country_code == 'CO') window.location = '/h/cop';
-                if(data.country_code == 'UY') window.location = '/h/uyu';
-                if(data.country_code == 'CR') window.location = '/h/crc';
-                if(data.country_code == 'DO') window.location = '/h/dop';
-                if(data.country_code == 'EC') window.location = '/h/usd';
-            })
-        })
+        // $(function(){
+        //     $.getJSON("https://ipgeolocation.abstractapi.com/v1/?api_key=c63a3e7fde864dc8b94e9c9d3f5f048b", function(data) {
+        //         if(data.country_code == 'AR') window.location = '/h/ars';
+        //         if(data.country_code == 'CL') window.location = '/h/clp';
+        //         if(data.country_code == 'MX') window.location = '/h/mxn';
+        //         if(data.country_code == 'ES') window.location = '/h/eur';
+        //         if(data.country_code == 'CO') window.location = '/h/cop';
+        //         if(data.country_code == 'UY') window.location = '/h/uyu';
+        //         if(data.country_code == 'CR') window.location = '/h/crc';
+        //         if(data.country_code == 'DO') window.location = '/h/dop';
+        //         if(data.country_code == 'EC') window.location = '/h/usd';
+        //     })
+        // })
     </script>
 </body>
 </html>
