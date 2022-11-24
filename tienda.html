@@ -57,10 +57,9 @@ permalink: "tienda/{{ store.slug }}/"
 
         <nav id="navbar" class="navbar">
             <ul>
-            <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+            <li><a class="nav-link scrollto active" href="/h/{{ store.pais }}">Home</a></li>
             <li><a class="nav-link scrollto" href="#about">Nosotros</a></li>
-            <li><a class="nav-link scrollto" href="#services">Habilidades</a></li>
-            <li><a class="nav-link scrollto " href="#portfolio">Productos</a></li>
+            <li><a class="nav-link scrollto" href="#faq">FAQ</a></li>
             <li><a class="nav-link scrollto" href="#contact">Contacto</a></li>
             <li><a class="getstarted scrollto" href="/comprar/{{ store.slug }}">Comprar</a></li>
             </ul>
@@ -278,6 +277,68 @@ permalink: "tienda/{{ store.slug }}/"
     </section>
     <!-- End Frequently Asked Questions Section -->
 
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact section-bg">
+        <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+            <h2>Contacto</h2>
+            <p>Escribinos.</p>
+        </div>
+
+        <div class="row">
+
+            <div class="col-lg-4">
+                <div class="info-box  mb-4 d-flex justify-content-center flex-column">
+                    <i class="bx bx-envelope d-flex justify-content-center"></i>
+                    <h3 class="d-flex justify-content-center">Email</h3>
+                    <p class="d-flex justify-content-center">hola@paradigmas.digital</p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="info-box  mb-4 d-flex justify-content-center flex-column">
+                    <i class='bx bxl-whatsapp d-flex justify-content-center'></i>
+                    <h3 class="d-flex justify-content-center">WhatsApp</h3>
+                    <p class="d-flex justify-content-center">Escribinos (agregar link)</p>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="info-box  mb-4 d-flex justify-content-center flex-column">
+                    <i class='bx bxl-instagram d-flex justify-content-center'></i>
+                    <a href="https://www.instagram.com/paradigmas.digital"><h3 class="d-flex justify-content-center">Instagram</h3></a>
+                    <a href="https://www.instagram.com/paradigmas.digital"><p class="d-flex justify-content-center">Seguinos</p></a>
+                </div>
+            </div>
+
+        </div>
+        
+        <div class="row">
+            <div class="col">
+
+                <form action="https://hook.us1.make.com/4vmel97jj2gmftsl2m6cvep3i7hf3f21" method="post" class="new-email-form">
+                    <div class="row">
+                        <div class="col-md-6 form-group">
+                            <input type="text" name="name" class="form-control" id="name" placeholder="Tu nombre" required>
+                        </div>
+                        <div class="col-md-6 form-group mt-3 mt-md-0">
+                            <input type="email" class="form-control" name="email" id="email" placeholder="Tu Email" required>
+                        </div>
+                    </div>
+                    <div class="form-group mt-3">
+                        <textarea class="form-control" name="message" id="message" rows="5" placeholder="Mensaje" required></textarea>
+                    </div>
+                    <div class="row">
+                        <button class="text-center mt-3" type="submit">Enviar mensaje</button>
+                    </div>
+                    
+                </form>
+            </div>
+        </div>
+        </div>
+    </section>
+    <!-- End Contact Section -->
+
 
 
 
@@ -296,7 +357,7 @@ permalink: "tienda/{{ store.slug }}/"
                     <div class="col-lg-3 col-md-6 footer-contact">
                         <h3>Paradigmas</h3>
                         <p>
-                            <strong>WhatsApp:</strong> +1 5589 55488 55<br>
+                            <strong>WhatsApp:</strong> +54 CAMBIAR<br>
                             <strong>Email:</strong> hola@paradigmas.digital<br>
                         </p>
                     </div>
@@ -304,9 +365,7 @@ permalink: "tienda/{{ store.slug }}/"
                     <div class="col-lg-2 col-md-6 footer-links">
                         <h4>Links útiles</h4>
                         <ul>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Nosotros</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Beneficios</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="/h/{{ store.pais }}">Home</a></li>
                             <li><i class="bx bx-chevron-right"></i> <a href="#">Términos y condiciones</a></li>
                             <li><i class="bx bx-chevron-right"></i> <a href="#">Política de privacidad</a></li>
                         </ul>
@@ -315,17 +374,17 @@ permalink: "tienda/{{ store.slug }}/"
                     <div class="col-lg-3 col-md-6 footer-links">
                         <h4>Nuestros servicios</h4>
                         <ul>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+                            <li><i class="bx bx-chevron-right"></i> Web Design</li>
+                            <li><i class="bx bx-chevron-right"></i> Web Development</li>
+                            <li><i class="bx bx-chevron-right"></i> Product Management</li>
+                            <li><i class="bx bx-chevron-right"></i> Marketing</li>
+                            <li><i class="bx bx-chevron-right"></i> Graphic Design</li>
                         </ul>
                     </div>
 
                     <div class="col-lg-4 col-md-6 footer-newsletter">
                         <h4>Unite a nuestro Newsletter</h4>
-                        <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+                        <p>Suscribete para ser el primero en enterarte de nuestras novedades.</p>
                         <form action="" method="post">
                             <input type="email" name="email"><input type="submit" value="Subscribirse">
                         </form>
@@ -343,13 +402,12 @@ permalink: "tienda/{{ store.slug }}/"
                     
                 </div>
                 <div class="social-links text-center text-md-right pt-3 pt-md-0">
-                    <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
                     <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-                    <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
                 </div>
             </div>
         </div>
-    </footer><!-- End Footer -->
+    </footer>
+    <!-- End Footer -->
     
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
     <div id="preloader"></div>
