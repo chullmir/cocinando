@@ -558,7 +558,10 @@ permalink: "comprar/{{ store.slug }}/"
       if(params.get('adname')) localStorage['adname'] = params.get('adname');
 
       // STRIPE KEY
-      var stripe = Stripe('pk_test_51LnurLHZ3J4tD2uVwPLfdpPNBe7xQfHMvR9xswX8sRRhCWQO19Q3Zu9DBh8TOQ69Ez3sGpfOLH70vYxPd8ybVzKC00vodEdBpC');
+      // --- TEST
+      // var stripe = Stripe('pk_test_51LnurLHZ3J4tD2uVwPLfdpPNBe7xQfHMvR9xswX8sRRhCWQO19Q3Zu9DBh8TOQ69Ez3sGpfOLH70vYxPd8ybVzKC00vodEdBpC');
+      // --- LIVE
+      var stripe = Stripe('pk_live_51LnurLHZ3J4tD2uVszDxYQhu4Aadf06hfvpcx8dVFNKzP4avqWa2nkl5lCbpZxisXpDrLzktubsO7KZPsasRWm1h004RiDX73C');
 
       $('#email-form').submit(function() {
         // alert("Hello! I am an alert box!");
