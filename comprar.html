@@ -56,24 +56,11 @@ permalink: "comprar/{{ store.slug }}/"
           <li><a class="nav-link scrollto" href="#contact">Contacto</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
+      </nav>
     </div>
-  </header><!-- End Header -->
-  <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex align-items-center">
-    <div class="container-fluid" data-aos="fade-up">
-      <div class="row justify-content-center">
-        <div class="col-xl-5 col-lg-6 pt-3 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
-          <h1>Entrená tu mente</h1>
-          <h2>Los mejores cuadernillos hechos por un equipo de pofresionales líderes.</h2>
-          <div><a href="/tienda/alfa-{{ home.slug }}" class="btn-get-started scrollto">Ver más</a></div>
-        </div>
-        <div class="col-xl-4 col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="150">
-          <img src="/assets/img/hero-img.png" class="img-fluid animated" alt="">
-        </div>
-      </div>
-    </div>
-  </section><!-- End Hero -->
+  </header>
+  <!-- End Header -->
+
 
   <!-- ======= CART Section ======= -->
   <section id="cart" class="contact section-bg">
@@ -81,7 +68,6 @@ permalink: "comprar/{{ store.slug }}/"
 
       <div class="section-title">
         <h2>Mi Carrito</h2>
-        <p class="">Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
       </div>
       <form id="email-form" name="email-form" data-name="Email Form" method="post" action="https://hook.us1.make.com/n14b8s2eq0nksvgevavopxyck8xt7fxt">
         <div class="row">
@@ -237,10 +223,14 @@ permalink: "comprar/{{ store.slug }}/"
               </div>
               {% assign options = store | hasPaymentOptions %}
               {% if options %}
-              <p>Elige la forma de pago</p>
-              <input type="radio" checked data-name="MediodePago" id="Tarjeta" name="MediodePago"  value="Stripe"><span for="Tarjeta">Tarjeta de Crédito / Débito</span>
-              <br>
-              <input type="radio" data-name="MediodePago" id="Paypal" name="MediodePago"  value="Paypal"><span for="Paypal">Paypal</span>
+              <div class="m-3 formas-de-pago">
+                <p>Elige la forma de pago</p>
+                <div class="options m-3"></div>
+                <input class="m-1" type="radio" checked data-name="MediodePago" id="Tarjeta" name="MediodePago"  value="Stripe"><span for="Tarjeta">Tarjeta de Crédito / Débito</span>
+                <br>
+                <input class="m-1" type="radio" data-name="MediodePago" id="Paypal" name="MediodePago"  value="Paypal"><span for="Paypal">Paypal</span>
+              </div>
+              
 
             
 
@@ -468,59 +458,59 @@ permalink: "comprar/{{ store.slug }}/"
   <!-- End Contact Section -->
   <!-- ======= Footer ======= -->
   <footer id="footer">
+
     <div class="footer-top">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-3 col-md-6 footer-contact">
-            <h3>Paradigmas</h3>
-            <p>
-              <strong>WhatsApp:</strong> +54 CAMBIAR<br>
-              <strong>Email:</strong> hola@paradigmas.digital<br>
-            </p>
-          </div>
-          <div class="col-lg-2 col-md-6 footer-links">
-            <h4>Links útiles</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="/h/{{ store.pais }}">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Términos y condiciones</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Política de privacidad</a></li>
-            </ul>
-          </div>
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Nuestros servicios</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> Web Design</li>
-              <li><i class="bx bx-chevron-right"></i> Web Development</li>
-              <li><i class="bx bx-chevron-right"></i> Product Management</li>
-              <li><i class="bx bx-chevron-right"></i> Marketing</li>
-              <li><i class="bx bx-chevron-right"></i> Graphic Design</li>
-            </ul>
-          </div>
-          <div class="col-lg-4 col-md-6 footer-newsletter">
-            <h4>Unite a nuestro Newsletter</h4>
-            <p>Suscribete para ser el primero en enterarte de nuestras novedades.</p>
-            <form action="https://hook.us1.make.com/v82i0dhtyrtbei25qotdimkrry3vg1eo" method="post">
-              <input type="email" name="email" placeholder="Tu Email" required><input type="submit" value="Subscribirse">
-            </form>
+        <div class="container">
+            <div class="row">
 
+                <div class="col-lg-3 col-md-6 footer-contact">
+                    <h3>Paradigmas</h3>
+                    <p>
+                        <strong>WhatsApp:</strong> +54 CAMBIAR<br>
+                        <strong>Email:</strong> hola@paradigmas.digital<br>
+                    </p>
+                </div>
 
+                <div class="col-lg-2 col-md-6 footer-links">
+                    <h4>Links útiles</h4>
+                    <ul>
+                        <li><i class="bx bx-chevron-right"></i> <a href="https://instagram.com/paradigmas.digital">Instagram</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Términos y condiciones</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Política de privacidad</a></li>
+                    </ul>
+                </div>
 
+                <div class="col-lg-3 col-md-6 footer-links">
+                    <h4>Nuestras colecciones</h4>
+                    <ul>
+                        <li><i class="bx bx-chevron-right"></i> <a href="/ver/griegos">Mente Griega</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="/ver/cardinales">Mente Espacial</a></li>
+                    </ul>
+                </div>
 
-          </div>
+                <div class="col-lg-4 col-md-6 footer-newsletter">
+                    <h4>Unite a nuestro Newsletter</h4>
+                    <p>Enterate de nuestras novedades antes que cualquiera.</p>
+                    <form action="https://hook.us1.make.com/v82i0dhtyrtbei25qotdimkrry3vg1eo" method="post">
+                        <input type="email" name="email" placeholder="Tu Email" required><input type="submit" value="Subscribirse">
+                      </form>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
+    
     <div class="container">
-      <div class="copyright-wrap d-md-flex py-4">
-        <div class="me-md-auto text-center text-md-start">
-          <div class="copyright">
-            &copy; Copyright <strong><span>Paradigmas</span></strong>. Todos los derechos reservados
-          </div>      
+        <div class="copyright-wrap d-md-flex py-4">
+            <div class="me-md-auto text-center text-md-start">
+                <div class="copyright">
+                    &copy; Copyright <strong><span>Paradigmas</span></strong>. Todos los derechos reservados
+                </div>
+                
+            </div>
+            <div class="social-links text-center text-md-right pt-3 pt-md-0">
+                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+            </div>
         </div>
-        <div class="social-links text-center text-md-right pt-3 pt-md-0">
-          <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-        </div>
-      </div>
     </div>
   </footer>
   <!-- End Footer -->
