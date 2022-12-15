@@ -101,54 +101,56 @@ permalink: "comprar/{{ store.slug }}/"
               </div>
 
               {% if store.valor-upsale-1 > 0 %}
-              <div class="card mt-3">
+              <div class="card m-3">
                 <div class="card-body">
                   <p class="item-title">¿Quieres sumar esta oferta exclusiva a tu compra?</p>
-
-                  <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                  </div>
                   
-                  <div class="d-flex flex-row">
-                    <div class="col item-title">
-                      <input type="checkbox" id="upsale-1" name="upsale-1" data-name="upsale-1"><span for="upsale-1" class="checkbox-label w-form-label">{{ store.titulo-upsale-1 }}</span>
+                  
+                  <div class="container">
+                    <!-- UPSALE 1 -->
+                    <div class="row">
+                      <div class="col-6">
+                        <input type="checkbox" id="upsale-1" name="upsale-1" data-name="upsale-1" class="form-check-input">
+                        <label for="upsale-1" class="form-check-label">{{ store.titulo-upsale-1 }}</label>
+                      </div>
+                      <div class="col-6 d-flex justify-content-end">
+                        <span>+</span>
+                        <span>{{ store.simbolo }}</span>
+                        <span>{{ store.valor-upsale-1 }}</span>
+                      </div>
                     </div>
-                    <div class="col item-price text-end">
-                      <span>+</span>
-                      <span>{{ store.simbolo }}</span>
-                      <span>{{ store.valor-upsale-1 }}</span>
+
+                    <div class="row">
+                      <div class="col">
+                        <p>{{ store.texto-upsale-1 }}</p>
+                      </div>
                     </div>
+                    <!-- Fin UPSALE 1 -->
+
+                    {% if store.valor-upsale-2 > 0 %}
+
+                    <!-- UPSALE 2 -->
+                    <div class="row">
+                      <div class="col-6">
+                        <input type="checkbox" id="upsale-2" name="upsale-2" data-name="upsale-2" class="form-check-input">
+                        <label for="upsale-2" class="form-check-label">{{ store.titulo-upsale-2 }}</label>
+                      </div>
+                      <div class="col-6 d-flex justify-content-end">
+                        <span>+</span>
+                        <span>{{ store.simbolo }}</span>
+                        <span>{{ store.valor-upsale-2 }}</span>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col">
+                        <p>{{ store.texto-upsale-2 }}</p>
+                      </div>
+                    </div>
+                    <!-- UPSALE 2 -->
                   </div>
-
-                  <div class="row">
-                    <div class="">
-                      <p>{{ store.texto-upsale-1 }}</p>
-                    </div>
-                  </div>
-
-                  {% if store.valor-upsale-2 > 0 %}
-
-
-                  <div class="d-flex flex-row">
-                    <div class="col item-title">
-                      <input type="checkbox" id="upsale-2" name="upsale-2" data-name="upsale-2"><span for="upsale-2" class="checkbox-label w-form-label">{{ store.titulo-upsale-2 }}</span>
-                    </div>
-                    <div class="col item-price text-end">
-                      <span>+</span>
-                      <span>{{ store.simbolo }}</span>
-                      <span>{{ store.valor-upsale-2 }}</span>
-                    </div>
-
-                  </div>
-
-                  <div class="row">
-                    <div class="">
-                      <p>{{ store.texto-upsale-2 }}</p>
-                    </div>
-                  </div>
-
                   {% endif %}
+
 
                 </div>
                 
