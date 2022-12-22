@@ -49,6 +49,62 @@ permalink: "comprar/{{ store.slug }}/"
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PDDTBZD" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
+    
+    <div id="loading-modal" style="z-index: 1;">
+
+      <div class="modal" style="display: block;">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="staticBackdropLabel">Muchas gracias</h1>
+            </div>
+            <div class="modal-body">
+              <div class="modal-loader d-flex justify-content-center m-3">
+                <img src="/images/loading.gif" loading="lazy" alt="" class="image-3" width="100px">
+              </div>
+              <br>
+              <div class="modal-text  d-flex justify-content-center m-3">
+                <p>Por favor espere mientras procesamos su compra...</p>
+              </div>
+              
+            </div>
+          </div>
+        </div>  
+
+      </div>
+
+
+        
+      </div>
+    </div>
+
+    <div class="prueba">
+
+      
+      
+      
+      
+    </div>
+
+
+  
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Muchas gracias</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+      </div>
+      <div class="modal-body">
+        Por favor espere
+      </div>
+    </div>
+  </div>
+</div>
+
   
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top ">
@@ -77,7 +133,7 @@ permalink: "comprar/{{ store.slug }}/"
       <div class="section-title">
         <h2>Mi Carrito</h2>
       </div>
-      <form id="email-form" name="email-form" data-name="Email Form" method="post" action="https://hook.us1.make.com/n14b8s2eq0nksvgevavopxyck8xt7fxt">
+      <form id="email-form" name="email-form" data-name="Cart Form" method="post" action="https://hook.us1.make.com/n14b8s2eq0nksvgevavopxyck8xt7fxt">
         <div class="row">
           <div class="col-lg-6">
             <div class="info-box mb-4">
@@ -251,13 +307,20 @@ permalink: "comprar/{{ store.slug }}/"
               {% endif %}
               
               <br>
+              
+              
               <div class="d-grid gap-2">
-                <button class="btn btn-primary m-3" type="submit" >Comprar</button>
+                <button id="botoncomprar" class="btn btn-primary m-3" type="submit">Comprar</button>
               </div>
             </div>
           </div>
         </div>
       </form>
+      
+
+      
+
+
 
 
 
@@ -568,7 +631,7 @@ permalink: "comprar/{{ store.slug }}/"
       $('#email-form').submit(function() {
         // alert("Hello! I am an alert box!");
         // fbq('track', 'InitiateCheckout');
-        // $('#loading-modal').css('display', 'flex'); // VER ESTO DE ACA
+        $('#loading-modal').css('display', 'block'); // VER ESTO DE ACA
         // $('input').blur();
         console.log('sending data');
         
@@ -639,6 +702,8 @@ permalink: "comprar/{{ store.slug }}/"
       });
     });
   </script>
+
+  
 
   
   
