@@ -1047,21 +1047,21 @@ section {
 }
 
 .portfolio .portfolio-wrap:hover::before {
-  top: 0;
+  /* top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  opacity: 1;
+  opacity: 1; */
 }
 
 .portfolio .portfolio-wrap:hover .portfolio-info {
-  opacity: 1;
-  top: calc(50% - 48px);
+  /* opacity: 1;
+  top: calc(50% - 48px); */
 }
 
 .portfolio .portfolio-wrap:hover .portfolio-links {
-  opacity: 1;
-  bottom: calc(50% - 50px);
+  /* opacity: 1;
+  bottom: calc(50% - 50px); */
 }
 
 /*--------------------------------------------------------------
