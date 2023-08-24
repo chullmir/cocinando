@@ -134,43 +134,40 @@ permalink: "comprar/{{ store.slug }}/"
         <h2>Mi Carrito</h2>
       </div>
       <form id="email-form" name="email-form" data-name="Cart Form" method="post" action="https://hook.us1.make.com/n14b8s2eq0nksvgevavopxyck8xt7fxt">
-        <div class="row">
-          <div class="col-lg-6">
-            <div class="info-box mb-4">
-              <h3 class="m-3">Resumen de tu compra</h3>
-              <div class="card m-3">
-                <div class="card-body">
-                  <div class="d-flex flex-row">
-                    <div class="col nombre">
-                      <p class="item-title">{{ store.titulo }}</p>
-                    </div>
-                    <div class="col precio text-end">
-                      <p class="item-price"><span>{{ store.simbolo }}</span><span class="format-number">{{ store.precio-original }}</span></p>
+
+        <div class="container overflow-hidden text-center">
+          <div class="row gx-5">
+            <div class="col">
+              <div class="info-box mb-4">
+                <h3 class="m-3">Resumen de tu compra</h3>
+                <div class="card m-3">
+                  <div class="card-body">
+                    <div class="d-flex">
+                      <div class="col nombre">
+                        <p class="item-title text-start">{{ store.titulo }}</p>
+                      </div>
+                      <div class="col precio text-end">
+                        <p class="item-price"><span>{{ store.simbolo }}</span><span class="format-number">{{ store.precio-original }}</span></p>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-
-              <div class="card m-3">
-                <div class="card-body">
-                  <div class="d-flex flex-row">
-                    <div class="col promo">
-                      <p class="item-discount">PROMO <span>{{ store.descuento-porcentual }}</span>% OFF</p>
-                    </div>
-                    <div class="col precio text-end">
-                      <p class="item-price">-<span>{{ store.simbolo }}</span><span class="format-number">{{ store.descuento-neto }}</span></p>
+                <div class="card m-3">
+                  <div class="card-body">
+                    <div class="d-flex flex-row">
+                      <div class="col promo">
+                        <p class="item-discount text-start">PROMO <span>{{ store.descuento-porcentual }}</span>% OFF</p>
+                      </div>
+                      <div class="col precio text-end">
+                        <p class="item-price">-<span>{{ store.simbolo }}</span><span class="format-number">{{ store.descuento-neto }}</span></p>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-
-              {% if store.valor-upsale-1 > 0 %}
-              <div class="card m-3">
-                <div class="card-body">
-                  <p class="item-title">¿Quieres sumar esta oferta exclusiva a tu compra?</p>
-                  
-                  
-                  <div class="container">
+                {% if store.valor-upsale-1 > 0 %}
+                <div class="card m-3">
+                  <div class="card-body">
+                    <p class="item-title">¿Quieres sumar esta oferta exclusiva a tu compra?</p>
                     <!-- UPSALE 1 -->
                     <div class="row">
                       <div class="col-6">
@@ -190,144 +187,112 @@ permalink: "comprar/{{ store.slug }}/"
                       </div>
                     </div>
                     <!-- Fin UPSALE 1 -->
-
                     {% if store.valor-upsale-2 > 0 %}
+                      <!-- UPSALE 2 -->
+                      <div class="row">
+                        <div class="col-6">
+                          <input type="checkbox" id="upsale-2" name="upsale-2" data-name="upsale-2" class="form-check-input">
+                          <label for="upsale-2" class="form-check-label">{{ store.titulo-upsale-2 }}</label>
+                        </div>
+                        <div class="col-6 d-flex justify-content-end">
+                          <span>+</span>
+                          <span>{{ store.simbolo }}</span>
+                          <span>{{ store.valor-upsale-2 }}</span>
+                        </div>
+                      </div>
+  
+                      <div class="row">
+                        <div class="col">
+                          <p>{{ store.texto-upsale-2 }}</p>
+                        </div>
+                      </div>
+                      <!-- Fin UPSALE 2 -->
+                    {% endif %}
 
-                    <!-- UPSALE 2 -->
-                    <div class="row">
-                      <div class="col-6">
-                        <input type="checkbox" id="upsale-2" name="upsale-2" data-name="upsale-2" class="form-check-input">
-                        <label for="upsale-2" class="form-check-label">{{ store.titulo-upsale-2 }}</label>
-                      </div>
-                      <div class="col-6 d-flex justify-content-end">
-                        <span>+</span>
-                        <span>{{ store.simbolo }}</span>
-                        <span>{{ store.valor-upsale-2 }}</span>
-                      </div>
-                    </div>
-
-                    <div class="row">
-                      <div class="col">
-                        <p>{{ store.texto-upsale-2 }}</p>
-                      </div>
-                    </div>
-                    <!-- UPSALE 2 -->
                   </div>
-                  {% endif %}
-
-
                 </div>
-                
-              </div>
-              {% endif %}
-
-
-              <div class="total m-3">
-                <div class="total_wrapper price-1 m-3">
-                  <span>TOTAL:</span>
-                  <span>{{store.simbolo}}</span>
-                  <span>{{store.precio-total-1}}</span>
-                </div>
-
-                <div class="total_wrapper price-2 m-3">
-                  <span>TOTAL:</span>
-                  <span>{{store.simbolo}}</span>
-                  <span>{{store.precio-total-2}}</span>
-                </div>
-
-                <div class="total_wrapper price-3 m-3">
-                  <span>TOTAL:</span>
-                  <span>{{store.simbolo}}</span>
-                  <span>{{store.precio-total-3}}</span>
-                </div>
-
-                <div class="total_wrapper price-4 m-3">
-                  <span>TOTAL:</span>
-                  <span>{{store.simbolo}}</span>
-                  <span>{{store.precio-total-4}}</span>
-                </div>
-
-                <div class="aclaraciones m-3">
-                  <p>Pago por única vez</p>
-                  <p>Precios expresados en <span>{{store.moneda}}</span></p>
+                {% endif %}
+                <div class="total m-3">
+                  <div class="total_wrapper price-1 m-3">
+                    <span>TOTAL:</span>
+                    <span>{{store.simbolo}}</span>
+                    <span>{{store.precio-total-1}}</span>
+                  </div>
+  
+                  <div class="total_wrapper price-2 m-3">
+                    <span>TOTAL:</span>
+                    <span>{{store.simbolo}}</span>
+                    <span>{{store.precio-total-2}}</span>
+                  </div>
+  
+                  <div class="total_wrapper price-3 m-3">
+                    <span>TOTAL:</span>
+                    <span>{{store.simbolo}}</span>
+                    <span>{{store.precio-total-3}}</span>
+                  </div>
+  
+                  <div class="total_wrapper price-4 m-3">
+                    <span>TOTAL:</span>
+                    <span>{{store.simbolo}}</span>
+                    <span>{{store.precio-total-4}}</span>
+                  </div>
+  
+                  <div class="aclaraciones m-3">
+                    <p>Pago por única vez</p>
+                    <p>Precios expresados en <span>{{store.moneda}}</span></p>
+                  </div>
                 </div>
               </div>
-
-              
-
-              
-            
-              
-
             </div>
-          </div>
-          
-          
-          <div class="col-lg-6">
-            <div class="info-box">
-              <h3 class="m-3">Ingresa tus datos</h3>
-              <div class="w-embed">
-                <input type="hidden" name="cart-code" value="{{ store.slug }}">
-                <input type="hidden" id="geo-country" name="geo-country" value="">
-                <input type="hidden" id="geo-region" name="geo-region" value="">
-                <input type="hidden" id="geo-city" name="geo-city" value="">
-              </div>
-              <div class="form-group m-3">
-                <label for="name">Nombre</label>
-                <input type="text" name="name" id="name" placeholder="Nombre *" class="form-control" required>
-              </div>
-              <div class="form-group m-3">
-                <label for="lastname">Apellido</label>
-                <input type="text" name="lastname" id="lastname" placeholder="Apellido *" class="form-control" required>
-              </div>
-              <h4 class="m-3">¿Dónde deseas recibir tu Cuadernillo?</h4>
-              <div class="form-group m-3">
-                <label for="email">Dirección de Email</label>
-                <!-- <input type="email" name="email" id="email" aria-describedby="emailHelp" placeholder="Email *" class="form-control" required> -->
-                <input type="email" name="email" id="email" aria-describedby="emailHelp" placeholder="Email *" class="form-control">
-                <small id="emailHelp" class="form-text text-muted">No compartiremos tu email con nadie.</small>
-              </div>
-              {% assign options = store | hasPaymentOptions %}
-              {% if options %}
-              <div class="m-3 formas-de-pago">
-                <p>Elige la forma de pago</p>
-                <div class="options m-3"></div>
-                <input class="m-1" type="radio" checked data-name="MediodePago" id="Tarjeta" name="MediodePago"  value="Stripe"><span for="Tarjeta">Tarjeta de Crédito / Débito</span>
-                <br>
-                <input class="m-1" type="radio" data-name="MediodePago" id="Paypal" name="MediodePago"  value="Paypal"><span for="Paypal">Paypal</span>
-              </div>
-              
+            <div class="col">
+              <div class="info-box">
+                <h3 class="m-3">Ingresa tus datos</h3>
+                <div class="w-embed">
+                  <input type="hidden" name="cart-code" value="{{ store.slug }}">
+                  <input type="hidden" id="geo-country" name="geo-country" value="">
+                  <input type="hidden" id="geo-region" name="geo-region" value="">
+                  <input type="hidden" id="geo-city" name="geo-city" value="">
+                </div>
+                <div class="form-group m-3">
+                  <label for="name">Nombre</label>
+                  <input type="text" name="name" id="name" placeholder="Nombre *" class="form-control" required>
+                </div>
+                <div class="form-group m-3">
+                  <label for="lastname">Apellido</label>
+                  <input type="text" name="lastname" id="lastname" placeholder="Apellido *" class="form-control" required>
+                </div>
+                <h4 class="m-3">¿Dónde deseas recibir tu Cuadernillo?</h4>
+                <div class="form-group m-3">
+                  <label for="email">Dirección de Email</label>
+                  <!-- <input type="email" name="email" id="email" aria-describedby="emailHelp" placeholder="Email *" class="form-control" required> -->
+                  <input type="email" name="email" id="email" aria-describedby="emailHelp" placeholder="Email *" class="form-control">
+                  <small id="emailHelp" class="form-text text-muted">No compartiremos tu email con nadie.</small>
+                </div>
+                {% assign options = store | hasPaymentOptions %}
+                {% if options %}
+                  <div class="m-3 formas-de-pago">
+                    <p>Elige la forma de pago</p>
+                    <div class="options m-3"></div>
+                    <input class="m-1" type="radio" checked data-name="MediodePago" id="Tarjeta" name="MediodePago"  value="Stripe"><span for="Tarjeta">Tarjeta de Crédito / Débito</span>
+                    <br>
+                    <input class="m-1" type="radio" data-name="MediodePago" id="Paypal" name="MediodePago"  value="Paypal"><span for="Paypal">Paypal</span>
+                  </div>
+                  {% elsif store.pais == "ars" %}
+                    <input type="hidden" name="MediodePago" value="Mercadopago">
+                  {% else %}
+                    <input type="hidden" name="MediodePago" value="Stripe">
+                  {% endif %}
+                  <br>
+                  <div class="d-grid gap-2">
+                    <button id="botoncomprar" class="btn btn-primary m-3" type="submit">Comprar</button>
+                  </div>
 
-            
-
-              {% elsif store.pais == "ars" %}
-              <input type="hidden" name="MediodePago" value="Mercadopago">
-              {% else %}
-              <input type="hidden" name="MediodePago" value="Stripe">
-              {% endif %}
-              
-              <br>
-              
-              
-              <div class="d-grid gap-2">
-                <button id="botoncomprar" class="btn btn-primary m-3" type="submit">Comprar</button>
               </div>
             </div>
           </div>
         </div>
       </form>
-      
-
-      
-
-
-
-
-
-
-        
-
-        
+  
 
       </div>
 
