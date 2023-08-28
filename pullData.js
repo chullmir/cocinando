@@ -4,7 +4,7 @@ var slugify = require('slugify')
 const { GoogleSpreadsheet } = require('google-spreadsheet');
 var serviceAccount = require("./firebase-key.json");
 
-// Invite the user: firebase-adminsdk-o1rx4@figueroasol-com.iam.gserviceaccount.com
+// Invite the user: paradigmas-service@paradigmas-393320.iam.gserviceaccount.com
 const SPREADSHEET_ID = '1o8STj8kO6_XmorLTj4uS3NVSSL04GHbnnBwkH-1O-n4';
 const doc = new GoogleSpreadsheet(SPREADSHEET_ID);
 doc.useServiceAccountAuth(serviceAccount);
