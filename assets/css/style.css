@@ -1047,24 +1047,6 @@ section {
   color: #fff;
 }
 
-.portfolio .portfolio-wrap:hover::before {
-  /* top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  opacity: 1; */
-}
-
-.portfolio .portfolio-wrap:hover .portfolio-info {
-  /* opacity: 1;
-  top: calc(50% - 48px); */
-}
-
-.portfolio .portfolio-wrap:hover .portfolio-links {
-  /* opacity: 1;
-  bottom: calc(50% - 50px); */
-}
-
 /*--------------------------------------------------------------
 # Portfolio Details
 --------------------------------------------------------------*/
@@ -1858,7 +1840,7 @@ section {
   top: 0px;
   margin: 0 auto;
   display: flex;
-  height: 600px;
+  height: 500px;
   left: 0;
   z-index: -1;
 clip-path: polygon(0 0, 75% 8%, 75% 80%, 0% 100%);
@@ -1873,7 +1855,7 @@ clip-path: polygon(0 0, 75% 8%, 75% 80%, 0% 100%);
   text-align: right;
   padding-top: 40px;
 }
-.cycles_text:after {
+/* .cycles_text:after {
   content: '';
   position: absolute;
   width: 180px;
@@ -1883,7 +1865,7 @@ clip-path: polygon(0 0, 75% 8%, 75% 80%, 0% 100%);
   right: initial;
   margin: 0 auto;
   top: 70px;
-}
+} */
 .lorem_text{
   width: 100%;
   float: left;
@@ -1989,8 +1971,33 @@ clip-path: polygon(0 0, 75% 8%, 75% 80%, 0% 100%);
 }
 
 img {
-  max-width: 100%;
+  max-width: 75%;
   height: auto;
+}
+
+/* .btn-get-started {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 10px 28px;
+  border-radius: 5px;
+  transition: 0.5s;
+  margin-top: 30px;
+  border: 2px solid #fff;
+  background: #fff;
+  color: #5846f9;
+}
+
+.btn-get-started:hover {
+  background: #8b0cd5;
+  color: #d0df04;
+  border: 2px solid #d0df04;;
+} */
+
+.beneficios {
+  color: #1c1c1c;
 }
 
 /* cycle section end */

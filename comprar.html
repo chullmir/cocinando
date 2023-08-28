@@ -302,49 +302,56 @@ permalink: "comprar/{{ store.slug }}/"
 
   <!-- ======= Producto Section ======= -->
   <section id="producto" class="features">
-        <div class="container" data-aos="fade-up">
-            
-  
-            <div class="row p-3">
-                <div class="col-lg-8 order-2 order-lg-1 d-flex flex-column align-items-lg-center" style="background-color: azure;">
-                    
-                    <div class="section-title m-3">
-                        <h2>{{ store.titulo }}</h2>
-                        <p>{{ store.subtitulo }}</p>
-                    </div>
-
-                    <div class="descripcion">
-                        <p>{{ store.descripcion }}</p>
-                        <ul>
-                            <li>{{ store.beneficios1 }}</li>
-                            <li>{{ store.beneficios2 }}</li>
-                            <li>{{ store.beneficios3 }}</li>
-                            <li>{{ store.beneficios4 }}</li>
-                            <li>{{ store.beneficios5 }}</li>
-                            <li>{{ store.beneficios6 }}</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="precio">
-                        <p>Comprar con descuento:</p>
-
-                        <div class="d-flex flex-row mb-3">
-                            <h4 class="p-2">{{  store.simbolo  }} <span class="format-number">{{ store.precio-total-1 }}</span><br><span class="fs-6">{{ store.moneda }}</span></h4>
-                            <div class="p-2"><del>{{ store.simbolo }} <span class="format-number">{{ store.precio-original }}</span></del></div>
-                            
+    <div class="container" data-aos="fade-up">
+        <!-- cycle section start -->
+        <div class="cycle_section layout_padding">
+            <div class="container">
+                <h1 class="cycle_taital">{{ store.titulo }}</h1>
+                <p class="cycle_text">{{ store.subtitulo }} </p>
+                <div class="cycle_section_2 layout_padding">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="box_main">
+                                <h6 class="number_text"></h6>
+                                <div class="image_2"><img src="{{ store.portada }}"></div>
+                            </div>
                         </div>
-
-                        <a href="/comprar/{{ store.slug }}" class="btn btn-primary btn-lg">Comprar Ahora</a>
+                        <div class="col-md-6">
+                            <h1 class="cycles_text">En esta edición</h1> 
+                            <p class="lorem_text">
+                                {{ store.descripcion }}
+                                <br><br>
+                                <ul>
+                                    <li class="beneficios">{{ store.beneficios1 }}</li>
+                                    <li class="beneficios">{{ store.beneficios2 }}</li>
+                                    <li class="beneficios">{{ store.beneficios3 }}</li>
+                                    <li class="beneficios">{{ store.beneficios4 }}</li>
+                                </ul>
+                            </p>
+                            <p class="lorem_text">
+                                {{ store.sobre-nosotros }}
+                            </p>
+                            <div class="btn_main">
+                                <!-- <a href="/tienda/alfa-{{ home.slug }}" class="btn-get-started scrollto">Ver más</a> -->
+                                <!-- <div class="buy_bt"><a href="#">Comprar</a></div> -->
+                                <h4 class="price_text">
+                                    Precio <span style=" color: #11a9f5">{{  store.simbolo  }}</span>
+                                    <span class="format-number" style=" color: #d87cc3">{{ store.precio-total-1 }}</span>
+                                    <br>
+                                    <del>{{ store.simbolo }} <span class="format-number">{{ store.precio-original }}</span></del>
+                                    <br>
+                                    <!-- {{ store.moneda }} -->
+                                </h4>
+                            </div>
+                            <a href="#" class="btn btn-outline-light btn-lg btn-get-started scrollto">Comprar</a>
+                        </div>
                     </div>
-
-                </div>
-
-                <div class="image col-lg-4 order-1 order-lg-2 " data-aos="zoom-in" data-aos-delay="100">
-                    <img src="/assets/img/productos/alfa.jpg" alt="" class="img-fluid">
                 </div>
             </div>
         </div>
-    </section>
+        <!-- cycle section end -->
+    </div>
+</section>
   <!-- End Producto Section -->
 
   <!-- ======= Frequently Asked Questions Section ======= -->
