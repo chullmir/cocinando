@@ -1322,9 +1322,10 @@ section {
 --------------------------------------------------------------*/
 .contact .info-box {
   color: #444444;
-  box-shadow: 0 0 30px rgba(214, 215, 216, 0.6);
   padding: 20px 0 30px 0;
   background: #fff;
+  border-radius: 4px;
+  /* padding: 30px; */
 }
 
 .contact .info-box i {
@@ -2001,3 +2002,131 @@ img {
 }
 
 /* cycle section end */
+
+/*--------------------------------------------------------------
+# Checkout /comprar
+--------------------------------------------------------------*/
+
+
+.boxtags {
+  padding: 20px; 
+  /* display: block;  */
+  position: relative;
+}
+.boxtags label {
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.9);
+  /* background-color: rgba(68, 197, 43, 0.9); */
+  border: 1px solid rgba(0, 0, 0, 0.7);
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 18px;
+  border-radius: 4px;
+  /* white-space: nowrap; */
+  margin: 0 0 10px 0;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-transition: all .2s;
+  -o-transition: all .2s;
+  transition: all .2s;
+  display: block;
+  padding: 10px 20px;
+  cursor: pointer; 
+}
+.boxtags label span {
+  background: #073189;
+  font-size: 14px;
+  padding: 2px 5px;
+  border-radius: 30px;
+  color: #fff;
+  margin-left: 10px; 
+}
+.boxtags label::before {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "FontAwesome";
+  font-weight: 900;
+  font-size: 24px;
+  padding: 0;
+  margin-right: 15px;
+  content: "\f1db";
+  color: rgba(0, 0, 0, 0.2);
+  -webkit-transition: -webkit-transform .3s ease-in-out;
+  transition: -webkit-transform .3s ease-in-out;
+  -o-transition: transform .3s ease-in-out;
+  transition: transform .3s ease-in-out;
+  transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
+  position: absolute;
+  right: 30px;
+  margin-top: -5px; 
+}
+.boxtags input[type="checkbox"] {
+  display: absolute; 
+  position: absolute;
+  opacity: 0; 
+}
+.boxtags input[type="checkbox"]:checked + label::before {
+  content: "\f058";
+  -webkit-transform: rotate(-360deg);
+  -ms-transform: rotate(-360deg);
+  transform: rotate(-360deg);
+  -webkit-transition: -webkit-transform .3s ease-in-out;
+  transition: -webkit-transform .3s ease-in-out;
+  -o-transition: transform .3s ease-in-out;
+  transition: transform .3s ease-in-out;
+  transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
+  color: #fff; 
+}
+.boxtags input[type="checkbox"]:checked + label {
+  border: 1px solid #c400c6;
+  background-color: #c400c6;
+  color: #fff;
+  -webkit-transition: all .2s;
+  -o-transition: all .2s;
+  transition: all .2s; 
+}
+.boxtags input[type="checkbox"]:checked + label span {
+  background: #fff;
+  color: #000; 
+}
+
+label.upsale-title { 
+  /* color: red; */
+  padding: 20px;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+label.total {
+  font-size: 1.5em;
+}
+label.total .number-total{
+  font-weight: bold;
+  font-size: 1.65em;
+}
+
+.contact .info-box p.upsale-descr {
+  font-size: .85em;
+}
+.form-group {
+  /* background-color: blueviolet; */
+  
+}
+
+.form-title {
+  /* color: red; */
+  padding: 10px;
+  /* background-color: yellowgreen; */
+}
+
+.pregunta-mail {
+  font-weight: normal;
+  font-size: 1em;
+  padding-top: 15px;
+}

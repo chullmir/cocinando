@@ -29,7 +29,9 @@ permalink: "comprar/{{ store.slug }}/"
   <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon">
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
   <!-- Vendor CSS Files -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="/assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
@@ -125,7 +127,7 @@ permalink: "comprar/{{ store.slug }}/"
   </header>
   <!-- End Header -->
 
-
+  
   <!-- ======= CART Section ======= -->
   <section id="cart" class="contact section-bg">
     <div class="container" data-aos="fade-up">
@@ -133,21 +135,22 @@ permalink: "comprar/{{ store.slug }}/"
       <div class="section-title">
         <h2>Mi Carrito</h2>
       </div>
-      <form id="email-form" name="email-form" data-name="Cart Form" method="post" action="https://hook.us1.make.com/n14b8s2eq0nksvgevavopxyck8xt7fxt">
 
-        <div class="container overflow-hidden text-center">
+      <form id="email-form" name="email-form" data-name="Cart Form" method="post" action="https://hook.us1.make.com/n14b8s2eq0nksvgevavopxyck8xt7fxt">
+        
+        <div class="container  text-center">
           <div class="row gx-5">
-            <div class="col">
+            <div class="col-md-6">
               <div class="info-box mb-4">
                 <h3 class="m-3">Resumen de tu compra</h3>
                 <div class="card m-3">
                   <div class="card-body">
                     <div class="d-flex">
-                      <div class="col nombre">
-                        <p class="item-title text-start">{{ store.titulo }}</p>
+                      <div class="col nombre d-flex justify-content-start">
+                        <label class="item-title text-start">{{ store.titulo }}</label>
                       </div>
                       <div class="col precio text-end">
-                        <p class="item-price"><span>{{ store.simbolo }}</span><span class="format-number">{{ store.precio-original }}</span></p>
+                        <label class="item-price"><span>{{ store.simbolo }}</span><span class="format-number">{{ store.precio-original }}</span></label>
                       </div>
                     </div>
                   </div>
@@ -155,96 +158,115 @@ permalink: "comprar/{{ store.slug }}/"
                 <div class="card m-3">
                   <div class="card-body">
                     <div class="d-flex flex-row">
-                      <div class="col promo">
-                        <p class="item-discount text-start">PROMO <span>{{ store.descuento-porcentual }}</span>% OFF</p>
+                      <div class="col promo d-flex justify-content-start">
+                        <label class="item-discount text-start">PROMO <span>{{ store.descuento-porcentual }}</span>% OFF</label>
+                        <!-- <p class="item-discount text-start">PROMO <span>{{ store.descuento-porcentual }}</span>% OFF</p> -->
                       </div>
                       <div class="col precio text-end">
-                        <p class="item-price">-<span>{{ store.simbolo }}</span><span class="format-number">{{ store.descuento-neto }}</span></p>
+                        <label class="item-price">-<span>{{ store.simbolo }}</span><span class="format-number">{{ store.descuento-neto }}</span></label>
+                        <!-- <p class="item-price">-<span>{{ store.simbolo }}</span><span class="format-number">{{ store.descuento-neto }}</span></p> -->
                       </div>
                     </div>
                   </div>
                 </div>
+
+
                 {% if store.valor-upsale-1 > 0 %}
-                <div class="card m-3">
-                  <div class="card-body">
-                    <p class="item-title">¿Quieres sumar esta oferta exclusiva a tu compra?</p>
-                    <!-- UPSALE 1 -->
-                    <div class="row">
-                      <div class="col-6">
-                        <input type="checkbox" id="upsale-1" name="upsale-1" data-name="upsale-1" class="form-check-input">
-                        <label for="upsale-1" class="form-check-label">{{ store.titulo-upsale-1 }}</label>
-                      </div>
-                      <div class="col-6 d-flex justify-content-end">
-                        <span>+</span>
-                        <span>{{ store.simbolo }}</span>
-                        <span>{{ store.valor-upsale-1 }}</span>
+                  <label class="upsale-title">¿Quieres sumar esta oferta exclusiva a tu compra?</label>
+                  <div class="row justify-content-center">
+                    <div class="col-md-12">
+                      <div class="boxtags">    
+                        
+                        <!-- inicio UPSALE 1 -->
+                        <div class="row">
+                          <input type="checkbox" id="upsale-1" name="upsale-1" data-name="upsale-1" class="form-check-input">
+                          <label for="upsale-1">
+                            {{ store.titulo-upsale-1 }} <span>+ {{ store.simbolo }} {{ store.valor-upsale-1 }}</span>
+                            <br>
+                            <p class="upsale-descr">
+                              {{ store.texto-upsale-1 }}
+                            </p>
+                          </label>
+                        </div>
+                        <!-- fin UPSALE 1 -->
+                        {% if store.valor-upsale-2 > 0 %}        
+                          <!-- inicio UPSALE 2 -->
+                          <div class="row">
+                            <input type="checkbox" id="upsale-2" name="upsale-2" data-name="upsale-2" class="form-check-input">
+                            <label for="upsale-2">
+                              {{ store.titulo-upsale-2 }} <span>+ {{ store.simbolo }} {{ store.valor-upsale-2 }}</span>
+                              <br>
+                              <p class="upsale-descr">
+                                {{ store.texto-upsale-2 }}
+                              </p>
+                            </label>
+                          </div>
+                          <!-- fin UPSALE 2 -->
+                        {% endif %}
+                        
                       </div>
                     </div>
-
-                    <div class="row">
-                      <div class="col">
-                        <p>{{ store.texto-upsale-1 }}</p>
-                      </div>
-                    </div>
-                    <!-- Fin UPSALE 1 -->
-                    {% if store.valor-upsale-2 > 0 %}
-                      <!-- UPSALE 2 -->
-                      <div class="row">
-                        <div class="col-6">
-                          <input type="checkbox" id="upsale-2" name="upsale-2" data-name="upsale-2" class="form-check-input">
-                          <label for="upsale-2" class="form-check-label">{{ store.titulo-upsale-2 }}</label>
-                        </div>
-                        <div class="col-6 d-flex justify-content-end">
-                          <span>+</span>
-                          <span>{{ store.simbolo }}</span>
-                          <span>{{ store.valor-upsale-2 }}</span>
-                        </div>
-                      </div>
-  
-                      <div class="row">
-                        <div class="col">
-                          <p>{{ store.texto-upsale-2 }}</p>
-                        </div>
-                      </div>
-                      <!-- Fin UPSALE 2 -->
-                    {% endif %}
-
                   </div>
-                </div>
                 {% endif %}
+                
                 <div class="total m-3">
                   <div class="total_wrapper price-1 m-3">
-                    <span>TOTAL:</span>
-                    <span>{{store.simbolo}}</span>
-                    <span>{{store.precio-total-1}}</span>
+                    <label class="total">
+                      <span>Total:</span>
+                      <span>{{store.simbolo}}</span>
+                      <span class="number-total">{{store.precio-total-1}}</span>
+                    </label>
                   </div>
-  
+    
                   <div class="total_wrapper price-2 m-3">
-                    <span>TOTAL:</span>
-                    <span>{{store.simbolo}}</span>
-                    <span>{{store.precio-total-2}}</span>
+                    <label class="total">
+                      <span>Total:</span>
+                      <span>{{store.simbolo}}</span>
+                      <span class="number-total">{{store.precio-total-2}}</span>
+                    </label>
                   </div>
-  
+    
                   <div class="total_wrapper price-3 m-3">
-                    <span>TOTAL:</span>
-                    <span>{{store.simbolo}}</span>
-                    <span>{{store.precio-total-3}}</span>
+                    <label class="total">
+                      <span>Total:</span>
+                      <span>{{store.simbolo}}</span>
+                      <span class="number-total">{{store.precio-total-3}}</span>
+                    </label>
                   </div>
-  
+    
                   <div class="total_wrapper price-4 m-3">
-                    <span>TOTAL:</span>
-                    <span>{{store.simbolo}}</span>
-                    <span>{{store.precio-total-4}}</span>
+                    <label class="total">
+                      <span>Total:</span>
+                      <span>{{store.simbolo}}</span>
+                      <span class="number-total">{{store.precio-total-4}}</span>
+                    </label>
                   </div>
-  
+    
                   <div class="aclaraciones m-3">
                     <p>Pago por única vez</p>
-                    <p>Precios expresados en <span>{{store.moneda}}</span></p>
+                    <p>Precios expresados en <b><span>{{store.moneda}}</span></b></p>
                   </div>
                 </div>
+
               </div>
             </div>
-            <div class="col">
+<!-- 
+
+
+ACA
+ACA
+ACA
+ACA
+            LLEGUE HASTA ACA EN LAS CORRECCIONES
+ACA
+ACA
+ACA
+ACA
+ACA
+ACA
+ACA             -->
+
+            <div class="col-md-6">
               <div class="info-box">
                 <h3 class="m-3">Ingresa tus datos</h3>
                 <div class="w-embed">
@@ -254,19 +276,43 @@ permalink: "comprar/{{ store.slug }}/"
                   <input type="hidden" id="geo-city" name="geo-city" value="">
                 </div>
                 <div class="form-group m-3">
-                  <label for="name">Nombre</label>
-                  <input type="text" name="name" id="name" placeholder="Nombre *" class="form-control" required>
+                  <div class="row">
+                    <div class="col-12 d-flex justify-content-start">
+                      <label for="name" class="form-title">Nombre:</label>
+                    </div>
+                    <div class="col-12">
+                      <input type="text" name="name" id="name" placeholder="Nombre *" class="form-control" required>
+                    </div>
+                  </div>
                 </div>
+
                 <div class="form-group m-3">
-                  <label for="lastname">Apellido</label>
-                  <input type="text" name="lastname" id="lastname" placeholder="Apellido *" class="form-control" required>
+                  <div class="row">
+                    <div class="col-12 d-flex justify-content-start">
+                      <label for="lastname" class="form-title">Apellido:</label>
+                    </div>
+                    <div class="col-12">
+                      <input type="text" name="lastname" id="lastname" placeholder="Apellido *" class="form-control" required>
+                    </div>
+                  </div>
                 </div>
-                <h4 class="m-3">¿Dónde deseas recibir tu Cuadernillo?</h4>
+
+                <h4 class="m-3 pregunta-mail">¿Dónde deseas recibir tu cuadernillo?</h4>
+
                 <div class="form-group m-3">
-                  <label for="email">Dirección de Email</label>
-                  <!-- <input type="email" name="email" id="email" aria-describedby="emailHelp" placeholder="Email *" class="form-control" required> -->
-                  <input type="email" name="email" id="email" aria-describedby="emailHelp" placeholder="Email *" class="form-control">
-                  <small id="emailHelp" class="form-text text-muted">No compartiremos tu email con nadie.</small>
+                  <div class="row">
+                    <div class="col-12 d-flex justify-content-start">
+                      <label for="email" class="form-title">Dirección de Email</label>
+                    </div>
+                    <div class="col-12">
+                      <!-- <input type="email" name="email" id="email" aria-describedby="emailHelp" placeholder="Email *" class="form-control" required> -->
+                      <input type="email" name="email" id="email" aria-describedby="emailHelp" placeholder="Email *" class="form-control">
+                    </div>
+                    <div class="col-12">
+                      <small id="emailHelp" class="form-text text-muted">No compartiremos tu email con nadie.</small>
+                    </div>
+                  </div>
+                  
                 </div>
                 {% assign options = store | hasPaymentOptions %}
                 {% if options %}
