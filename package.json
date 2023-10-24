@@ -1,5 +1,5 @@
 {
-  "name": "entrenamente",
+  "name": "paradigmas",
   "version": "1.0.0",
   "description": "",
   "main": ".eleventy.js",
@@ -16,12 +16,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yemel/entrenamente.git"
+    "url": "git+https://github.com/chullmir/paradigmas.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/yemel/entrenamente/issues"
+    "url": "https://github.com/chullmir/paradigmas/issues"
   },
-  "homepage": "https://github.com/yemel/entrenamente#readme"
+  "homepage": "https://github.com/chullmir/paradigmas#readme"
 }
