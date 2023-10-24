@@ -1847,17 +1847,7 @@ section {
       left: 0;
       top: 8px; }
 
-
-
-/* cycle section start */
-
-.cycle_section {
-  width: 100%;
-  float: left;
-  padding-bottom: 90px;
-}
-
-.cycle_taital {
+.we_help_title {
   width: 100%;
   float: left;
   font-size: 40px;
@@ -1866,7 +1856,7 @@ section {
   font-weight: bold;
 }
 
-.cycle_text {
+.we_help_text {
   width: 100%;
   float: left;
   font-size: 16px;
@@ -1874,102 +1864,6 @@ section {
   text-align: center;
   margin: 0px;
 }
-.cycle_section_2{
-  width: 100%;
-  float: left;
-}
-.box_main{
-  width: 100%;
-  float: left;
-  position: relative;
-}
-.number_text {
-  width: 50px;
-  height: 50px;
-  font-size: 18px;
-  color: #ffffff;
-  background-color: #d87cc3;
-  border-radius: 100px;
-  text-align: center;
-  padding: 10px 0px;
-  float: right;
-  margin-right: 140px;
-  margin-top: 60px;
-}
-.image_2 {
-  width: 100%;
-  float: left;
-  text-align: center;
-  padding-left: 100px;
-}
-.box_main:after{
-  content: '';
-  background-color: #11a9f5;
-  position: absolute;
-  width: 420px;
-  right: 0px;
-  top: 0px;
-  margin: 0 auto;
-  display: flex;
-  height: 500px;
-  left: 0;
-  z-index: -1;
-clip-path: polygon(0 0, 75% 8%, 75% 80%, 0% 100%);
-
-}
-.cycles_text{
-  width: 100%;
-  float: left;
-  font-size: 40px;
-  color: #1c1c1c;
-  font-weight: bold;
-  text-align: right;
-  padding-top: 40px;
-}
-/* .cycles_text:after {
-  content: '';
-  position: absolute;
-  width: 180px;
-  height: 1px;
-  background-color: #325662;
-  left: 0px;
-  right: initial;
-  margin: 0 auto;
-  top: 70px;
-} */
-.lorem_text{
-  width: 100%;
-  float: left;
-  font-size: 16px;
-  color: #1c1c1c;
-  margin: 0px; 
-  padding-top: 40px;   
-}
-
-.btn_main{
-  width: 100%;
-  display: flex;
-  padding-top: 50px;
-}
-.buy_bt{
-  width: 170px;
-  float: left;
-}
-.buy_bt a{
-  width: 100%;
-  float: left;
-  font-size: 18px;
-  color: #ffffff;
-  background-color: #325662;
-  padding: 8px 5px;
-  text-align: center;
-  font-weight: bold;
-}
-.buy_bt a:hover{
-  color: #ffffff;
-  background-color: #f7c17b;
-}
-
 .price_text {
   width: 100%;
   float: right;
@@ -1979,100 +1873,13 @@ clip-path: polygon(0 0, 75% 8%, 75% 80%, 0% 100%);
   padding-top: 18px;
   padding-bottom: 18px;
 }
-.cycle_section_3{
+.seguridad{
+  margin: 25px;
   width: 100%;
-  float: left;
-  padding-bottom: 90px;
 }
-.box_main_3{
-  width: 100%;
-  float: left;
-  position: relative;
+.seguridad img{
+  width: 50%;
 }
-.box_main_3:after {
-  content: '';
-  background-color: #f7c17b;
-  position: absolute;
-  width: 420px;
-  right: 0px;
-  top: 0px;
-  margin: 0 auto;
-  display: flex;
-  height: 530px;
-  left: 0;
-  z-index: -1;
-  clip-path: polygon(0 0, 65% 8%, 64% 80%, 0% 100%);
-}
-.number_text_2 {
-  width: 50px;
-  height: 50px;
-  font-size: 18px;
-  color: #ffffff;
-  background-color: #325662;
-  border-radius: 100px;
-  text-align: center;
-  padding: 10px 0px;
-  float: right;
-  margin-right: 185px;
-  margin-top: 60px;
-}
-.read_btn_main {
-  width: 100%;
-  float: left;
-  margin-top: 200px;
-
-}
-.read_bt{
-  width: 170px;
-  margin: 0 auto;
-  text-align: center;
-}
-.read_bt a{
-  width: 100%;
-  float: left;
-  font-size: 18px;
-  color: #ffffff;
-  background-color: #f7c17b;
-  padding: 8px 5px;
-  text-align: center;
-}
-.read_bt a:hover{
-  color: #ffffff;
-  background-color: #325662;
-}
-
-img {
-  max-width: 75%;
-  height: auto;
-}
-
-/* .btn-get-started {
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  font-size: 16px;
-  letter-spacing: 1px;
-  display: inline-block;
-  padding: 10px 28px;
-  border-radius: 5px;
-  transition: 0.5s;
-  margin-top: 30px;
-  border: 2px solid #fff;
-  background: #fff;
-  color: #5846f9;
-}
-
-.btn-get-started:hover {
-  background: #8b0cd5;
-  color: #d0df04;
-  border: 2px solid #d0df04;;
-} */
-
-.beneficios {
-  color: #1c1c1c;
-}
-
-/* cycle section end */
-
 /*--------------------------------------------------------------
 # Checkout /comprar
 --------------------------------------------------------------*/
