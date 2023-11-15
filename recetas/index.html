@@ -3,19 +3,23 @@
 <html lang="en-US" class="no-js">
 	<head>
 		<meta charset="UTF-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="description" content="">
-		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-		<link rel="manifest" href="/site.webmanifest">
-		<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#333333">
-		<meta name="msapplication-TileColor" content="#333333">
-		<meta name="theme-color" content="#ffffff">
-		<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
-        <link rel='stylesheet' id='classic-theme-styles-css' href='https://www.antoninocannavacciuolo.it/site/wp-includes/css/classic-themes.min.css' media='all' />
-        <link rel='stylesheet' id='html5blank-css' href='https://www.antoninocannavacciuolo.it/site/wp-content/themes/cannavacciuolo/style.css' media='all' />
+		<link rel="apple-touch-icon" sizes="180x180" href="/images/logo-ico.ico">
+		<link rel="icon" type="image/png" sizes="32x32" href="/images/logo-ico.ico">
+		<link rel="icon" type="image/png" sizes="16x16" href="/images/logo-ico.ico">
+        <!-- SEO plugin. -->
+        <title>Recetas - Cocinando con la abuela Lucha.</title>
+        <meta name="description" content="Bienvenidos a Cocinando con la abuela Lucha. Descubran, recetas y secretos de lo mejor de la comida judía." />
+        <link rel="canonical" href="https://www.cocinandoconlaabuelalucha.com.ar" />
+        <meta property="og:locale" content="es_AR" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Cocinando con la abuela Lucha" />
+        <meta property="og:description" content="Bienvenidos a Cocinando con la abuela Lucha. Descubran, recetas y secretos de lo mejor de la comida judía." />
+        <meta property="og:url" content="https://www.cocinandoconlaabuelalucha.com.ar" />
+        <meta property="og:site_name" content="Cocinando con la abuela Lucha" />
+        <meta property="article:publisher" content="https://www.facebook.com/cocinandoconlaabuelalucha/" />
+        <!-- / SEO plugin. -->
+        <link rel='stylesheet' href='/css/style.css' media='all' />
         <script type='text/javascript' src='/js/lib/conditionizr.js' id='conditionizr-js'></script>
         <script type='text/javascript' src='/js/lib/conditionizr-detects/retina.js' id='conditionizrRetina-js'></script>
         <script type='text/javascript' src='/js/lib/conditionizr-detects/touch.js' id='conditionizrTouch-js'></script>
@@ -28,14 +32,16 @@
         <script type='text/javascript' src='/js/lib/scroll-magic-plugins/animation.gsap.js' id='scrollMagicAnimationGsap-js'></script>
         <script type='text/javascript' src='/js/lib/scroll-magic-plugins/debug.addIndicators.js' id='scrollMagicDebug-js'></script>
         <script type='text/javascript' src='/js/scripts.js' id='html5blankscripts-js'></script>
-	</head>
+    </head>
+
+    
 	<body class="page-template page-template-template page-template-attivita-eventi page-template-templateattivita-eventi-php page page-id-123 page-parent">
 		<script>
 			var controller = new ScrollMagic.Controller();
 		</script>
 		<div id="wrapper">
 			<header id="header">
-				<div class="container">		
+				<div class="container">
 					<div id="logo">
 						<a href="/">
 							<img src="/images/logo-cclal-black.png" title="Cocinando con la abuela Lucha" class="logo black"/>
@@ -45,9 +51,10 @@
 					<div class="content">
 						<div id="main-menu-box">
 							<ul id="main-menu" class="main-menu">
-                                <li id="" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home page_item"><a href="/" aria-current="page">Home</a></li>
+                                <li id="" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home"><a href="/">Home</a></li>
+                                <li id="" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/tienda.html">Tienda</a></li>
                                 <li id="" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/quienes-somos.html">Quiénes somos</a></li>
-                                <li id="" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item current_page_item"><a href="/recetas/">Recetas</a></li>
+                                <li id="" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item current_page_item"><a aria-current="page" href="recetas/">Recetas</a></li>
                                 <li id="" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/corrientes.html">Corrientes</a></li>
                                 <li id="" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/pinonate.html">Magia en un piñonate</a></li>
                                 <li id="" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-133"><a>—</a></li>
@@ -69,16 +76,7 @@
 			</header>
             <main id="main">
                 <section class="page-hero fade">
-                    <div class="gallery">
-                    </div>
-                    <div class="container">
-                        <div class="content">
-                            <h1 class="fly-title"></h1>
-                            <div class="box">
-                                <h3 class="title"></h3>
-                            </div>
-                        </div>	
-                    </div>
+                    
                 </section>
                 <section class="side-txt left">	
                     <div class="container">
@@ -156,6 +154,7 @@
                 <div class="content">
                     <div class="box">
                         <ul id="footer-menu" class="footer-menu">
+                            <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/tienda.html">Tienda</a></li>
                             <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/quienes-somos.html">Quiénes somos</a></li>
                             <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/recetas/">Recetas</a></li>
                             <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/corrientes.html">Corrientes</a></li>
