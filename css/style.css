@@ -3039,23 +3039,26 @@ a.arrow:hover:after {
 .flyer-title {
 	/* max-width: 600px; */
 	width: auto;
-	height: 40px;
+	/* height: 40px; */
 	padding: 18px 31px;
-	margin-top: 40px;
+	margin-top: 40px ;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	/* background: #d1aa0f; */
 	background-color: #303133;
 	border-color: #303133;
 	border-width: 1px;
-
 	border-radius: 10em;
-	
 	font-family: filson-pro, sans-serif;
 	font-weight: 300;	
 	font-size: 1.4rem;
 	color: white;
 	text-align: center;
 	text-transform: uppercase;
+}
+.text-input{
+	border: 1px solid #e2e2e2;
+	border-radius: 1em; 
+	padding: 18px 31px;
+	margin: 20px 0;
 }
