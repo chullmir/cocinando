@@ -86,9 +86,10 @@
                     <div class="container">
                         <div class="gallery">
                             <form id="email-form" name="email-form" data-name="Email Form" method="post" action="https://hook.us1.make.com/8tfuw5vg3a0lyo03cmfyczhdawwmwu6y" class="item" style="align-items: flex-start;">
-                            
-
-                                
+                                <input type="hidden" name="cart-code" value="ars">
+                                <input type="hidden" id="geo-country" name="geo-country" value="">
+                                <input type="hidden" id="geo-region" name="geo-region" value="">
+                                <input type="hidden" id="geo-city" name="geo-city" value="">
 
                                 <div class="content">
                                     <h3>Tu compra</h3>
@@ -193,5 +194,85 @@
                 </div>
             </footer>
 		</div><!-- wrapper-->
+        <!-- ------ SCRIPTS ------ -->
+        <!-- <script>fbq('track', 'AddToCart');</script> -->
+        <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" crossorigin="anonymous"></script> -->
+        <!-- <script src="https://js.stripe.com/v3/"></script> -->
+        <script>
+            $(function(){
+                $.getJSON("https://ipgeolocation.abstractapi.com/v1/?api_key=c63a3e7fde864dc8b94e9c9d3f5f048b", function(data){
+                    if(data.country_code == 'US') window.location = '/unavailable';
+                })
+            })
+        </script>
+        <script>
+            $(function(){
+                const params = new URLSearchParams(window.location.search);
+                if(params.get('utm_source')) localStorage['utm-source'] = params.get('utm_source'); 
+                if(params.get('utm_medium')) localStorage['utm-medium'] = params.get('utm_medium');
+                if(params.get('utm_campaign')) localStorage['utm-campaign'] = params.get('utm_campaign');
+                if(params.get('utm_content')) localStorage['utm-content'] = params.get('utm_content');
+                if(params.get('adname')) localStorage['adname'] = params.get('adname');
+                // STRIPE 
+                // var stripe = Stripe('');
+                $('#email-form').submit(function() {
+                    fbq('track', 'InitiateCheckout');
+                    // $('#loading-modal').css('display', 'flex');
+                    // $('input').blur();
+                    // console.log('sending data');
+                    $.ajax({
+                        url: $('#email-form').attr('action'),
+                        type: "post",
+                        data: { 
+                            apellido: $('#apellido').val(), 
+                            name: $('#name').val(),
+                            email: $('#email').val(),
+                            'cart-code': '{{ store.slug }}',
+                            'gateway': $("input[name='MediodePago']:checked").val() || $("input[name='MediodePago']").val(),
+                            'geo-country': $('#geo-country').val(),
+                            'geo-region': $('#geo-region').val(),
+                            'geo-city': $('#geo-city').val(),
+                            'utm-source': localStorage['utm-source'],
+                            'utm-medium': localStorage['utm-medium'],
+                            'utm-campaign': localStorage['utm-campaign'],
+                            'utm-content': localStorage['utm-content'],
+                            'adname': localStorage['adname'],
+                            'user-agent': navigator.userAgent,
+                        },
+                        success: function(data, textStatus, xhr) {
+                            if (xhr.status == 200) {
+                                window.location = data; // mercadopago
+                            } else if (xhr.status == 202) {
+                                return stripe.redirectToCheckout({ sessionId: data });
+                            } else {
+                                $('#loading-modal').css('display', 'none');
+                                alert('Ha ocurrido un error, por favor verifique los datos e inténtelo nuevamente.');
+                            }
+                        },
+                        error: function(xhr) {
+                            $('#loading-modal').css('display', 'none');
+                            alert('Ha ocurrido un error, por favor verifique los datos e inténtelo nuevamente.');
+                        }
+                    });
+                    return false;
+                });
+                $.getJSON("https://ipgeolocation.abstractapi.com/v1/?api_key=c63a3e7fde864dc8b94e9c9d3f5f048b", function(data) {
+                    $('#geo-country').val(data.country);
+                    $('#geo-region').val(data.region);
+                    $('#geo-city').val(data.city);
+                })
+            });
+            const geoInput = $('#geo-country')[0]; // Get the DOM element from jQuery object
+            
+            console.log(geoInput);
+            
+            console.log("Default Value: ", geoInput.defaultValue);
+
+
+
+
+
+        </script>
+
 	</body>
 </html>
