@@ -3072,3 +3072,7 @@ a.arrow:hover:after {
 	padding: 18px 31px;
 	margin: 20px 0;
 }
+.container-recetas .recetas .istruzioni li {
+	font-size: 0.85em;
+	margin: 10px 0;
+}
