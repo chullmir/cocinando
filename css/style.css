@@ -903,13 +903,6 @@ a.arrow {
 	font-size: 1.2rem;
 }
 
-a.arrow:after {
-	content: url("img/link.svg");
-	width: 100px;
-	margin-left: 20px;
-	margin-bottom: 2.5px;
-	transition: .5s;
-}
 
 a.arrow:hover {
 	color: #d1aa0f;
