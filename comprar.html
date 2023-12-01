@@ -86,7 +86,8 @@
                     <div class="container">
                         <div class="gallery">
                             <form id="email-form" name="email-form" data-name="Email Form" method="post" action="https://hook.us1.make.com/8tfuw5vg3a0lyo03cmfyczhdawwmwu6y" class="item" style="align-items: flex-start;">
-                                <input type="hidden" name="cart-code" value="ars">
+                                <input type="hidden" id="cart-code" name="cart-code" value="cclal-esp">
+                                <input type="hidden" id="gateway" name="gateway" value="Stripe">
                                 <input type="hidden" id="geo-country" name="geo-country" value="">
                                 <input type="hidden" id="geo-region" name="geo-region" value="">
                                 <input type="hidden" id="geo-city" name="geo-city" value="">
@@ -147,16 +148,24 @@
                                 <img src="/images/book-lajmayin.jpg" alt="">
                             </div>
                             <div class="istruzioni">
-                                <p>Let me tell you about those Sunday mornings when I would wake up to the smell of my mother&#8217;s ragù. A wonderful aroma I&#8217;ll never forget! Today I&#8217;d like to share this fond memory with you&#8230;</p>
-                                <p>There are many versions of Neapolitan meat sauce, some make it with pork rinds, some with beef, and others with pork chops.</p>
-                                <p>My favorite version is with pork ribs.</p>
-                                <p><b>To prepare</b><br />Clean the pork ribs and cut them along the bone. Season with salt and pepper and let them marinate for about ten minutes. Fry them in a large pot with a little oil until they&#8217;re golden brown. Add the thinly sliced onion and the peperoncino (if you don&#8217;t like spicy, don&#8217;t add it).</p>
-                                <p>Sweat the onion, then add the red wine. As soon as the alcohol has evaporated, add the peeled tomatoes.</p>
-                                <p>Cook over low heat for at least 5 hours.</p>
-                                <p>Halfway through, add the bay leaf. Once cooked, take the meat off the bone.</p>
-                                <p>This is my ragù base that can be used for different dishes.</p>
-                                <p><b>My suggestion</b><br />This version is simpler and not as rich as traditional ragù. It also lightens up this hearty dish. You can serve the ragù over pasta, like <i>paccheri</i> or <i>maccheroni</i>!</p>
-                                <p><i>Uagliù!</i> Don&#8217;t forget to lick your plate clean with that <i>scarpetta</i>!</p>
+                                <p>
+                                    Te invitamos a sumergirte en <b>"Cocinando con la Abuela Lucha"</b>, un recetario de comida casera que abarca <i>186 páginas</i> llenas de sabores, refranes en ladino, cantos entrañables de nuestra abuela y un diccionario sefardí que añade un toque de diversión.
+                                </p>
+                                <p>
+                                    Este compendio no solo es un recetario, sino una ventana a la cocina auténtica de Lucha. En la sección de recetas prácticas, las <b>opciones saladas</b> se despliegan en panificados, ensaladas, empanadas y platos fuertes, cada uno con ese toque distintivo que solo las abuelas saben.
+                                </p>
+                                <p>
+                                    Pero la verdadera magia se desata en la <b>sección de dulces</b>. Desde dulces turcos hasta tortas sencillas y deliciosas, pasando por crepes, medialunas, almíbares, merengues y, ¡sí, incluso un dulce de damascos cocinados al sol!
+                                </p>
+                                <p>
+                                    Con <b>más de 100 recetas</b> detalladas, este libro se convierte en una guía práctica para recrear la autenticidad de la <b>cocina casera</b>.
+                                </p>
+                                <p>
+                                    Cada página no solo presenta una receta, sino una <b>historia de sabores</b> que se entrelazan con nuestras <b>tradiciones y exquisiteces familiares</b>. Esperamos que disfrutes de este recetario tanto como nosotras y que, al compartirlo con tus <b>seres queridos</b>, encuentres el placer de hacer que se les haga agua la boca. 
+                                </p>
+                                <p>
+                                    <b>¡Buen provecho!</b>
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -220,6 +229,7 @@
                     // $('#loading-modal').css('display', 'flex');
                     // $('input').blur();
                     // console.log('sending data');
+                    $('#gateway').val("Stripe");
                     $.ajax({
                         url: $('#email-form').attr('action'),
                         type: "post",
@@ -227,8 +237,10 @@
                             apellido: $('#apellido').val(), 
                             name: $('#name').val(),
                             email: $('#email').val(),
-                            'cart-code': '{{ store.slug }}',
-                            'gateway': $("input[name='MediodePago']:checked").val() || $("input[name='MediodePago']").val(),
+                            // 'cart-code': '{{ store.slug }}',
+                            'cart-code': 'cclal-esp',
+                            // 'gateway': $("input[name='MediodePago']:checked").val() || $("input[name='MediodePago']").val(),
+                            gateway: $('#gateway').val(),
                             'geo-country': $('#geo-country').val(),
                             'geo-region': $('#geo-region').val(),
                             'geo-city': $('#geo-city').val(),
