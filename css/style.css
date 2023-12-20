@@ -359,10 +359,6 @@ body {
 	clear: both;
 }
 
-.clear {
-	*zoom: 1;
-}
-
 h1,
 h2,
 h3,
@@ -3068,4 +3064,14 @@ a.arrow:hover:after {
 .container-recetas .recetas .istruzioni li {
 	font-size: 0.85em;
 	margin: 10px 0;
+}
+.old-price{
+	font-size: 0.8em;
+	color: gray;
+	text-decoration: line-through;
+}
+.descuentos{
+	font-size: 0.8em;
+	color: red;
+
 }
