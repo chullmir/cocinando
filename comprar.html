@@ -105,7 +105,7 @@
                     <div class="gallery">
                         <picture class="image">
                             <source media="(max-width: 767px)" srcset="/images/cocinandoconlaabuelalucha-comprar-mobile-768x9999.jpg, /images/cocinandoconlaabuelalucha-comprar-mobile-1536x9999.jpg 2x">
-                            <img srcset="/images/cocinandoconlaabuelalucha-comprar-desktop-scaled-1920x9999.jpg, /images/cocinandoconlaabuelalucha-comprar-desktop-scaled-3840x9999.jpg 2x" src="/images/cocinandoconlaabuelalucha-comprar-desktop-scaled-1920x9999.jpg" alt="Antonino Cannavacciuolo" title="cocinandoconlaabuelalucha-comprar-desktop">
+                            <img srcset="/images/cocinandoconlaabuelalucha-comprar-desktop-scaled-1920x9999.jpg, /images/cocinandoconlaabuelalucha-comprar-desktop-scaled-3840x9999.jpg 2x" src="/images/cocinandoconlaabuelalucha-comprar-desktop-scaled-1920x9999.jpg" alt="Cocinando con la abuela Lucha" title="cocinandoconlaabuelalucha-comprar-desktop">
                         </picture>
                     </div>
                 </section>
@@ -115,7 +115,7 @@
                         <div class="gallery">
                             <form id="email-form" name="email-form" data-name="Email Form" method="post" action="https://hook.us1.make.com/8tfuw5vg3a0lyo03cmfyczhdawwmwu6y" class="item" style="align-items: flex-start;">
                                 <input type="hidden" id="cart-code" name="cart-code" value="cclal-esp">
-                                <input type="hidden" id="gateway" name="gateway" value="Stripe">
+                                <input type="hidden" id="gateway" name="gateway" value="MercadoPago">
                                 <input type="hidden" id="geo-country" name="geo-country" value="">
                                 <input type="hidden" id="geo-region" name="geo-region" value="">
                                 <input type="hidden" id="geo-city" name="geo-city" value="">
@@ -226,7 +226,7 @@
                         </ul>
                         <a href="https://www.cocinandoconlaabuelalucha.com.ar/privacy-policy/" >Privacy policy</a> - <a href="https://www.cocinandoconlaabuelalucha.com.ar/cookie-policy/" >Cookie policy</a>
                         <br>
-						© 2023 Cocinando con la abuela Lucha - All Rights Reserved
+						© 2024 Cocinando con la abuela Lucha - All Rights Reserved
                         <br>
 						<br>
 						Credits: <a href="https://mobiusconsulting.com.ar/" target="_blank">Mobius Consulting</a>
@@ -260,7 +260,8 @@
                     // $('#loading-modal').css('display', 'flex');
                     // $('input').blur();
                     // console.log('sending data');
-                    $('#gateway').val("Stripe");
+                    // $('#gateway').val("Stripe");
+                    $('#gateway').val("Mercadopago");
                     $.ajax({
                         url: $('#email-form').attr('action'),
                         type: "post",
